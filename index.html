@@ -6,232 +6,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إلى الله — رحلة إلى الله عبر أسمائه الحسنى</title>
 <meta name="description" content="كتاب تأمّل في أسماء الله الحسنى — حمد الكتبي">
+<meta property="og:title" content="إلى الله — رحلة تأمّل في أسماء الله الحسنى">
+<meta property="og:description" content="كتاب تأمّل روحي في أسماء الله الحسنى لحمد الكتبي. رحلة لمعرفة الله عبر مقامات اليقظة والمراقبة والإحسان.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
-
 :root {
-–gold: #B8860B;
-–gold-light: #D4A843;
-–dark: #1a1a2e;
-–text: #2c2c2c;
-–bg: #faf8f5;
-–bg-dark: #0d0d1a;
+  --g: #C4972A;
+  --gl: #E8C96A;
+  --dk: #1a1a2e;
+  --tx: #2c2c2c;
+  --bg: #faf8f5;
+  --bgd: #0d0d1a;
 }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Amiri','Noto Naskh Arabic',serif; background:var(--bg); color:var(--tx); line-height:2; font-size:18px; }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-font-family: ‘Amiri’, ‘Noto Naskh Arabic’, serif;
-background: var(–bg);
-color: var(–text);
-line-height: 2;
-font-size: 18px;
-}
-
-/* Hero */
+/* Hero - compact, clear */
 .hero {
-background: linear-gradient(135deg, var(–bg-dark) 0%, #1a1a3e 50%, var(–bg-dark) 100%);
-color: #fff;
-text-align: center;
-padding: 80px 20px 60px;
-position: relative;
+background: linear-gradient(135deg, var(–bgd) 0%, #1a1a3e 50%, var(–bgd) 100%);
+color:#fff; text-align:center; padding:50px 20px 40px; position:relative;
 }
-.hero::after {
-content: ‘’;
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 4px;
-background: linear-gradient(90deg, transparent, var(–gold), transparent);
-}
+.hero::after { content:’’; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,transparent,var(–g),transparent); }
 .hero h1 {
-font-size: 3em;
-color: var(–gold-light);
-margin-bottom: 10px;
-text-shadow: 0 2px 20px rgba(184,134,11,0.3);
+font-size:4em; color:#F5D78E; margin-bottom:8px; font-weight:700;
+text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
-.hero .subtitle {
-font-size: 1.3em;
-color: #ccc;
-margin-bottom: 15px;
-}
-.hero .author {
-font-size: 1.1em;
-color: var(–gold);
-margin-top: 20px;
-}
-
-/* Container */
-.container {
-max-width: 750px;
-margin: 0 auto;
-padding: 20px;
-}
-
-/* Intro */
-.intro {
-text-align: center;
-padding: 40px 20px;
-max-width: 750px;
-margin: 0 auto;
-}
-.intro p {
-margin-bottom: 12px;
-color: #555;
-}
-.intro .bold-text {
-color: var(–text);
-font-weight: 700;
-font-size: 1.05em;
-}
+.hero .sub { font-size:1.2em; color:#d4c8a8; margin-bottom:8px; font-weight:700; }
+.hero .auth { font-size:1em; color:var(–g); margin-top:12px; }
+.hero .tagline { font-size:0.95em; color:#aaa; margin-top:15px; max-width:500px; margin-left:auto; margin-right:auto; line-height:1.8; }
 
 /* TOC */
 .toc {
-max-width: 750px;
-margin: 40px auto;
-padding: 30px;
-background: #fff;
-border-radius: 12px;
-box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+max-width:700px; margin:30px auto; padding:25px 20px; background:#fff;
+border-radius:10px; box-shadow:0 2px 15px rgba(0,0,0,0.05);
 }
-.toc h2 {
-text-align: center;
-color: var(–gold);
-font-size: 1.8em;
-margin-bottom: 25px;
+.toc h2 { text-align:center; color:var(–g); font-size:1.6em; margin-bottom:20px; }
+.ti {
+display:flex; justify-content:space-between; align-items:center;
+padding:10px 12px; text-decoration:none; color:var(–tx);
+border-bottom:1px solid #f0ece6; transition:background 0.2s;
 }
-.toc-item {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 12px 15px;
-text-decoration: none;
-color: var(–text);
-border-bottom: 1px solid #f0ece6;
-transition: background 0.2s;
-}
-.toc-item:hover {
-background: #faf6ef;
-}
-.toc-title {
-font-weight: 700;
-font-size: 1.05em;
-}
-.toc-sub {
-color: var(–gold);
-font-size: 0.95em;
-}
+.ti:hover { background:#faf6ef; }
+.tt { font-weight:700; font-size:1em; }
+.ts { color:var(–g); font-size:0.9em; }
 
 /* Chapter */
-.chapter {
-max-width: 750px;
-margin: 50px auto;
-padding: 0 20px;
+.ch { max-width:700px; margin:40px auto; padding:0 20px; }
+.chd {
+text-align:center; margin-bottom:30px; padding:30px 0 15px;
+border-top:2px solid #f0ece6;
 }
-.chapter-header {
-text-align: center;
-margin-bottom: 40px;
-padding: 40px 0 20px;
-border-top: 2px solid #f0ece6;
-}
-.chapter-header h2 {
-font-size: 2em;
-color: var(–dark);
-margin-bottom: 8px;
-}
-.chapter-subtitle {
-font-size: 1.4em;
-color: var(–gold);
-margin-bottom: 15px;
-}
-.chapter-content p {
-margin-bottom: 16px;
-text-align: justify;
-}
-.bold-text {
-font-weight: 700;
-color: var(–dark);
-}
+.chd h2 { font-size:1.8em; color:var(–dk); margin-bottom:6px; font-weight:700; }
+.csub { font-size:1.3em; color:var(–g); margin-bottom:10px; }
+.cc p { margin-bottom:14px; text-align:justify; }
+.strong { font-weight:700; color:var(–dk); }
 .verse {
-text-align: center;
-font-size: 1.15em;
-color: var(–gold);
-font-weight: 700;
-margin: 25px 0;
-padding: 15px;
-background: linear-gradient(135deg, #faf6ef, #fff);
-border-radius: 8px;
-border: 1px solid #f0ece6;
+text-align:center; font-size:1.1em; color:var(–g); font-weight:700;
+margin:20px 0; padding:12px; background:#faf6ef; border-radius:6px; border:1px solid #f0ece6;
 }
 .hadith {
-text-align: center;
-font-size: 1.05em;
-color: #555;
-margin: 20px 0;
-padding: 10px 20px;
-border-right: 3px solid var(–gold);
-background: #fdfcfa;
+text-align:center; font-size:1em; color:#555; margin:16px 0;
+padding:8px 16px; border-right:3px solid var(–g); background:#fdfcfa;
 }
-.hadith.bold {
-font-weight: 700;
-color: var(–text);
-}
-.reference {
-text-align: center;
-font-size: 0.85em;
-color: #999;
-margin: -10px 0 20px;
-}
-.separator {
-text-align: center;
-color: var(–gold-light);
-font-size: 1.2em;
-margin: 30px 0;
-letter-spacing: 8px;
-}
-hr.divider {
-border: none;
-height: 1px;
-background: linear-gradient(90deg, transparent, #ddd, transparent);
-margin: 30px 0;
-}
+.hadith.bold { font-weight:700; color:var(–tx); }
+.ref { text-align:center; font-size:0.8em; color:#999; margin:-8px 0 16px; }
+.sep { text-align:center; color:var(–gl); font-size:1em; margin:20px 0; letter-spacing:6px; opacity:0.6; }
 
 /* Footer */
-.footer {
-text-align: center;
-padding: 40px 20px;
-background: var(–bg-dark);
-color: #888;
-margin-top: 60px;
+.foot {
+text-align:center; padding:35px 20px; background:var(–bgd); color:#888; margin-top:50px;
 }
-.footer .gold { color: var(–gold); }
+.foot .gd { color:var(–g); }
+.foot a { color:var(–g); }
 
-/* Scroll to top */
-.scroll-top {
-position: fixed;
-bottom: 30px;
-left: 30px;
-width: 45px;
-height: 45px;
-background: var(–gold);
-color: #fff;
-border: none;
-border-radius: 50%;
-font-size: 20px;
-cursor: pointer;
-opacity: 0;
-transition: opacity 0.3s;
-z-index: 100;
+/* Scroll top */
+.st {
+position:fixed; bottom:25px; left:25px; width:40px; height:40px;
+background:var(–g); color:#fff; border:none; border-radius:50%;
+font-size:18px; cursor:pointer; opacity:0; transition:opacity 0.3s; z-index:100;
 }
-.scroll-top.visible { opacity: 0.8; }
-.scroll-top:hover { opacity: 1; }
+.st.v { opacity:0.7; }
+.st:hover { opacity:1; }
 
-@media (max-width: 600px) {
-body { font-size: 16px; }
-.hero h1 { font-size: 2.2em; }
-.chapter-header h2 { font-size: 1.6em; }
-.toc { margin: 20px 10px; padding: 20px; }
+@media (max-width:600px) {
+body { font-size:16px; }
+.hero h1 { font-size:2.8em; }
+.hero { padding:35px 15px 30px; }
+.chd h2 { font-size:1.5em; }
+.toc { margin:20px 10px; padding:18px 15px; }
+.ch { padding:0 15px; }
+.cc p { text-align:right; }
 }
 </style>
 
@@ -240,88 +104,60 @@ body { font-size: 16px; }
 
 <div class="hero">
   <h1>إلى الله</h1>
-  <div class="subtitle">رحلة إلى الله عبر أسمائه الحسنى</div>
-  <div class="separator">✦ ✦ ✦</div>
-  <div class="author">حمد الكتبي</div>
+  <div class="sub">رحلة إلى الله عبر أسمائه الحسنى</div>
+  <div class="auth">حمد الكتبي</div>
+  <div class="tagline">كتاب تأمّل في أسماء الله، كل اسم يفتح سؤالًا عن حالك مع الله.<br>وقفات تضعك أمام نفسك في ضوء أسماء الله.</div>
 </div>
-
-<section class="intro">
-
-<div class="separator">✦ ✦ ✦</div>
-<p>هذا الكتاب ليس شرحًا لغويًا لأسماء الله الحسنى.</p>
-<p>وليس جمعًا لمواعظ متفرقة.</p>
-<p>بل هو وقفات تأمل مع أسماء الله،</p>
-<p>ينظر فيها الإنسان إلى قلبه في ضوء هذه الأسماء.</p>
-<p>كل اسم يفتح سؤالًا.</p>
-<p>وكل سؤال يضعك أمام نفسك.</p>
-<p class="bold-text">هذا ليس كتابًا لتتعرف إلى أسماء الله فقط —</p>
-<p class="bold-text">بل كتاب لتتعرف إلى نفسك في ضوء أسماء الله.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">إلى الله</p>
-<p>رحلة إلى الله عبر أسمائه الحسنى</p>
-<p>تأليف: حمد الكتبي</p>
-<div class="separator">✦ ✦ ✦</div>
-<p>© جميع الحقوق محفوظة للمؤلف</p>
-<p>الطبعة الأولى — ٢٠٢٦م</p>
-<p>لا يُسمح بإعادة نشر هذا الكتاب أو أي جزء منه</p>
-<p>دون إذن كتابي مسبق من المؤلف.</p>
-<div class="separator">✦ ✦ ✦</div>
-
-</section>
 
 <div class="toc">
   <h2>المحتويات</h2>
-  <a href="#ch1" class="toc-item"><span class="toc-title">المقدمة</span></a>
-<a href="#ch2" class="toc-item"><span class="toc-title">الفصل الأول</span><span class="toc-sub">الله</span></a>
-<a href="#ch3" class="toc-item"><span class="toc-title">الفصل الثاني</span><span class="toc-sub">اليقظة</span></a>
-<a href="#ch4" class="toc-item"><span class="toc-title">الفصل الثالث</span><span class="toc-sub">المراقبة</span></a>
-<a href="#ch5" class="toc-item"><span class="toc-title">الفصل الرابع</span><span class="toc-sub">الحياء</span></a>
-<a href="#ch6" class="toc-item"><span class="toc-title">الفصل الخامس</span><span class="toc-sub">الافتقار</span></a>
-<a href="#ch7" class="toc-item"><span class="toc-title">الفصل السادس</span><span class="toc-sub">الرجوع</span></a>
-<a href="#ch8" class="toc-item"><span class="toc-title">الفصل السابع</span><span class="toc-sub">الرجاء</span></a>
-<a href="#ch9" class="toc-item"><span class="toc-title">الفصل الثامن</span><span class="toc-sub">المحبة والقرب</span></a>
-<a href="#ch10" class="toc-item"><span class="toc-title">الفصل التاسع</span><span class="toc-sub">التعظيم والخشية</span></a>
-<a href="#ch11" class="toc-item"><span class="toc-title">الفصل العاشر</span><span class="toc-sub">التسليم</span></a>
-<a href="#ch12" class="toc-item"><span class="toc-title">الفصل الحادي عشر</span><span class="toc-sub">الإحسان</span></a>
-<a href="#ch13" class="toc-item"><span class="toc-title">الفصل الأخير</span><span class="toc-sub">العودة إلى الله</span></a>
+  <a href="#ch1" class="ti"><span class="tt">المقدمة</span></a>
+<a href="#ch2" class="ti"><span class="tt">الفصل الأول</span><span class="ts">الله</span></a>
+<a href="#ch3" class="ti"><span class="tt">الفصل الثاني</span><span class="ts">اليقظة</span></a>
+<a href="#ch4" class="ti"><span class="tt">الفصل الثالث</span><span class="ts">المراقبة</span></a>
+<a href="#ch5" class="ti"><span class="tt">الفصل الرابع</span><span class="ts">الحياء</span></a>
+<a href="#ch6" class="ti"><span class="tt">الفصل الخامس</span><span class="ts">الافتقار</span></a>
+<a href="#ch7" class="ti"><span class="tt">الفصل السادس</span><span class="ts">الرجوع</span></a>
+<a href="#ch8" class="ti"><span class="tt">الفصل السابع</span><span class="ts">الرجاء</span></a>
+<a href="#ch9" class="ti"><span class="tt">الفصل الثامن</span><span class="ts">المحبة والقرب</span></a>
+<a href="#ch10" class="ti"><span class="tt">الفصل التاسع</span><span class="ts">التعظيم والخشية</span></a>
+<a href="#ch11" class="ti"><span class="tt">الفصل العاشر</span><span class="ts">التسليم</span></a>
+<a href="#ch12" class="ti"><span class="tt">الفصل الحادي عشر</span><span class="ts">الإحسان</span></a>
+<a href="#ch13" class="ti"><span class="tt">الفصل الأخير</span><span class="ts">العودة إلى الله</span></a>
 
 </div>
 
-<section id="ch1" class="chapter">
-  <div class="chapter-header">
+<section id="ch1" class="ch">
+  <div class="chd">
     <h2>المقدمة</h2>
 
-```
-<div class="separator">✦ ✦ ✦</div>
-```
-
   </div>
-  <div class="chapter-content">
-    <div class="separator">✦ ✦ ✦</div>
+  <div class="cc">
+    <div class="sep">✦ ✦ ✦</div>
 <p>كم مرة نطقت باسم الله اليوم؟</p>
 <p>في صلاتك. في دعائك. في حديثك. على لسانك حين تفرح وحين تحزن.</p>
 <p>لكن هل توقفت يومًا لتسأل نفسك:</p>
-<p class="bold-text">ما مكان الله في قلبك؟</p>
+<p class="strong">ما مكان الله في قلبك؟</p>
 <p>ليس السؤال: ماذا تعرف عن الله. بل: ما مكانه في قلبك — الآن — وأنت</p>
 <p>تقرأ هذا الكلام؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>الحمد لله رب العالمين، والصلاة والسلام على أشرف المرسلين.</p>
 <p>سأل جبريلُ عليه السلام النبيَّ ﷺ:</p>
 <p class="hadith bold">«ما الإحسان؟»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>فقال ﷺ:</p>
 <p class="hadith bold">«أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه يراك»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>هذا الحديث هو روح هذا الكتاب.</p>
 <p>الإحسان ليس مقامًا يُنال بالتمني، ولا درجةً تُبلغ بكثرة العمل وحده. الإحسان</p>
 <p>ثمرة معرفة. من عرف الله حقًا، عبده حقًا. ومن جهله، تعثّر في طريقه إليه وإن</p>
 <p>اجتهد.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>مقصود هذا الكتاب أن يأخذك في رحلة.</p>
 <p>رحلة تبدأ من حيث أنت الآن — مسلم يؤدي ما عليه — ثم تسير بك، اسمًا</p>
 <p>بعد اسم، مقامًا بعد مقام، حتى يتغير قلبك. حتى تصبح عبادتك لله عبادة من</p>
 <p>يعرفه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>كثيرٌ منّا يحفظ أسماء الله الحسنى. يردّدها في دعائه. يسمعها في القرآن. لكن</p>
 <p>شتان بين من يعرف الاسم ومن يعرف صاحب الاسم.</p>
 <p>حين يقال لك إن الله هو الرزّاق — هل يتغير شيء في صدرك حين تُغلق الأبواب</p>
@@ -331,7 +167,7 @@ body { font-size: 16px; }
 <p>حين تعلم أنه الودود — هل تشعر بقربه في لحظات الوحشة؟</p>
 <p>إن لم تُحدث المعرفة هذا الأثر، فهي لم تصل إلى القلب بعد. ومهمة هذا</p>
 <p>الكتاب أن يفتح لها الطريق.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ستقرأ عن أسماء الله كأنها مرايا: كل اسم يكشف لك شيئًا عن الله، وشيئًا عن</p>
 <p>نفسك، وشيئًا عن الطريق بينكما.</p>
 <p>الكتاب يسير في مقامات: يبدأ باسم الله الجامع، ثم ينتقل إلى اليقظة،</p>
@@ -340,19 +176,19 @@ body { font-size: 16px; }
 <p>أخرى — لكن بقلب جديد.</p>
 <p>في البداية عرف القارئ الاسم. في النهاية — إن شاء الله — عرف صاحب</p>
 <p>الاسم.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>اقرأ هذا الكتاب بقلبك قبل عينيك. لا تستعجل. توقّف عند كل اسم حتى تجد</p>
 <p>أثره في نفسك. وادعُ الله بما تقرأ، فإن الدعاء بالأسماء الحسنى من أعظم</p>
 <p>أبواب الإجابة.</p>
 <p class="verse">﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا﴾</p>
-<p class="reference">(الأعراف: 180)</p>
+<p class="ref">(الأعراف: 180)</p>
 <p>وأسأل الله أن يجعل هذا الكتاب سببًا لمعرفته، وطريقًا إلى محبته، وبابًا من</p>
 <p>أبواب القرب منه.</p>
 <p>اللهم علّمنا ما ينفعنا، وانفعنا بما علّمتنا، وزدنا علمًا وعملًا يا أرحم</p>
 <p>الراحمين.</p>
-<p class="bold-text">حمد الكتبي</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">ملاحظة قبل القراءة:</p>
+<p class="strong">حمد الكتبي</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">ملاحظة قبل القراءة:</p>
 <p>هذا الكتاب ليس شرحًا علميًا للأسماء الحسنى. من أراد التوسع في التعريفات</p>
 <p>اللغوية أو الاصطلاحية أو أقوال العلماء في تفصيل كل اسم — فله كتب</p>
 <p>التفسير وشروح الأسماء الحسنى، وهي كثيرة ونافعة.</p>
@@ -360,35 +196,34 @@ body { font-size: 16px; }
 <p>نفسه وتصحيح وجهته.</p>
 <p>**[هذا ليس كتابًا لتتعرف إلى أسماء الله فقط — بل كتاب لتتعرف إلى نفسك</p>
 <p>في ضوء أسماء الله.]**</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">كيف تقرأ هذا الكتاب:</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">كيف تقرأ هذا الكتاب:</p>
 <p>لا تقرأه على عجل. اقرأه ببطء. توقّف عند كل اسم حتى تجد أثره في نفسك. لا</p>
 <p>تنتقل إلى الفصل التالي إلا حين تشعر أن الاسم الذي قرأته ترك شيئًا في قلبك</p>
 <p>— ولو كان شيئًا صغيرًا.</p>
 <p>وإن مررت بسؤال يؤلمك — لا تهرب منه. قف معه. لأن الأسئلة المؤلمة هي</p>
 <p>التي تفتح الأبواب المغلقة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 
   </div>
 </section>
 
-<section id="ch2" class="chapter">
-  <div class="chapter-header">
+<section id="ch2" class="ch">
+  <div class="chd">
     <h2>الفصل الأول</h2>
-    <div class="chapter-subtitle">الله</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الله</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">﴿اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ﴾</p>
-<p class="reference">(البقرة: 255)</p>
-<p class="bold-text">الله</p>
+<p class="ref">(البقرة: 255)</p>
+<p class="strong">الله</p>
 <p>كل شيء يبدأ من هنا. من أن تعرف لمن هذا الاسم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>قبل كل اسم، هناك اسم.</p>
 <p>قبل الرحمن والرحيم، قبل الملك والقدوس، قبل العزيز والجبار — هناك اسم</p>
 <p>واحد تدور حوله الأسماء كلها:</p>
-<p class="bold-text">الله.</p>
+<p class="strong">الله.</p>
 <p>تردّده كل يوم عشرات المرات. في صلاتك. في ذكرك. في دعائك. على لسانك حين</p>
 <p>تفرح وحين تحزن. لكن هل توقفت يومًا لتسأل نفسك: ماذا يعني أن أقول</p>
 <p class="hadith">«الله»؟</p>
@@ -404,7 +239,7 @@ body { font-size: 16px; }
 <p>الذي أنشأك من عدم وفصلك عن غيرك. والمصوِّر الذي أعطاك صورتك — وجهك</p>
 <p>وملامحك وصوتك وبصمة أصابعك التي لا تتكرر في مليارات البشر.</p>
 <p class="verse">﴿هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ﴾</p>
-<p class="reference">(الحشر: 24)</p>
+<p class="ref">(الحشر: 24)</p>
 <p>تأمّل في نفسك: عيناك اللتان تقرأ بهما هذا الكلام — من صمّمهما؟ قلبك</p>
 <p>الذي يخفق الآن — من أودع فيه الحياة؟ عقلك الذي يفهم هذه المعاني — من</p>
 <p>ركّبه؟ كل هذا فعل الخالق البارئ المصوّر — وأنت تمرّ على نفسك كل يوم ولا</p>
@@ -412,8 +247,8 @@ body { font-size: 16px; }
 <p>وهو الواحد الأحد. واحد في ذاته لا شريك له. أحد في صفاته لا مثيل له. لا</p>
 <p>إله غيره. ولا ربّ سواه. كل ما في الوجود يشهد بوحدانيته — لو فتحت</p>
 <p>عينيك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>لا تمرّ عليك لحظة واحدة في حياتك إلا ولهذا الاسم فيها أثر.</p>
 <p>حين تستيقظ من نومك — فقد أعاد إليك روحك من عنده. النوم موتة صغرى، وكل</p>
 <p>صباح بعثٌ صغير. لكنك تستيقظ وتنهض وتمضي كأن شيئًا لم يكن.</p>
@@ -431,7 +266,7 @@ body { font-size: 16px; }
 <p>يده. ليس بعضه. كله. الأسباب أسبابه. والأقدار أقداره. والخلق</p>
 <p>خلقه.</p>
 <p class="verse">﴿وَإِلَيْهِ يُرْجَعُ الْأَمْرُ كُلُّهُ فَاعْبُدْهُ وَتَوَكَّلْ عَلَيْهِ﴾</p>
-<p class="reference">(هود: 123)</p>
+<p class="ref">(هود: 123)</p>
 <p>هذا ليس كلامًا نظريًا. هذا — لو استقر في قلبك — يغيّر طريقة</p>
 <p>عيشك.</p>
 <p>يعني أن كل باب أُغلق أمامك — أغلقه الله. ليس العدو، ولا الحظ، ولا</p>
@@ -442,8 +277,8 @@ body { font-size: 16px; }
 <p>إليه.</p>
 <p>ليس لأن الأمر يُترك بلا حكمة — بل لأن الله يدبّر كل شيء بحكمة ورحمة</p>
 <p>وعلم — وإن لم تفهم الحكمة الآن.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>المقام الذي يوقظه اسم «الله» في القلب هو مقام العبودية.</p>
 <p>والعبودية ليست ذلًّا ولا ضعفًا. العبودية أشرف مقام يقوم فيه الإنسان. لأن</p>
 <p>العبودية لله تحريرٌ من العبودية لكل ما سواه.</p>
@@ -451,7 +286,7 @@ body { font-size: 16px; }
 <p>الهوى، ومن عبادة الخوف. لأنه عرف أن الله وحده يستحق أن يُخضع له</p>
 <p>القلب.</p>
 <p class="verse">﴿وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ﴾</p>
-<p class="reference">(الذاريات: 56)</p>
+<p class="ref">(الذاريات: 56)</p>
 <p>قال ابن عباس رضي الله عنهما في معنى هذه الآية: إلا ليعرفون. والمعنى</p>
 <p>متقارب عند التأمل، لأن العبادة الحقيقية لا تقوم إلا على المعرفة. من عرف</p>
 <p>الله عبده. ومن جهله لم يحسن عبادته.</p>
@@ -472,10 +307,10 @@ body { font-size: 16px; }
 <p>لا أحد.</p>
 <p>كل ذنب، وكل تقصير، وكل ضعف — أصله نقص في استحضار هذا الاسم. ولو امتلأ</p>
 <p>القلب به حقًا — لما وسع غيره.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>إذا وصلت إلى هنا، فأنت الآن أمام سؤال لا يحتمل التأجيل:</p>
-<p class="bold-text">هل الله هو الأعظم في قلبك — الآن؟</p>
+<p class="strong">هل الله هو الأعظم في قلبك — الآن؟</p>
 <p>ليس ما تتمنى أن يكون. ليس ما تعرف أنه يجب أن يكون. بل ما هو الآن</p>
 <p>فعلًا.</p>
 <p>هل الله أعظم شيء في قلبك حقًا؟ أم أن هناك أشياء تتقدم عليه أحيانًا دون أن</p>
@@ -491,8 +326,8 @@ body { font-size: 16px; }
 <p>باله.</p>
 <p>**[«من تقرَّبَ إليَّ شبرًا تقرَّبتُ إليه ذراعًا، ومن تقرَّبَ إليَّ ذراعًا تقرَّبتُ إليه</p>
 <p>باعًا، ومن أتاني يمشي أتيتُهُ هرولة»]**</p>
-<p class="reference">(متفق عليه)</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="ref">(متفق عليه)</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>هذا الفصل هو البوابة.</p>
 <p>بعده تبدأ الرحلة: اسمًا بعد اسم، ومقامًا بعد مقام. ستعرف كيف يُوقظك الله</p>
 <p>من غفلتك. وكيف يراقبك وأنت لا تنتبه. وكيف يسترك وأنت لا تستحي. وكيف</p>
@@ -500,39 +335,38 @@ body { font-size: 16px; }
 <p>تقترب.</p>
 <p>لكن كل ذلك يبدأ من هنا. من هذا الاسم. من أن تقف لحظة وتقول</p>
 <p>بصدق:</p>
-<p class="bold-text">الله.</p>
+<p class="strong">الله.</p>
 <p>ليس لفظًا تردّده لسانك. بل حقيقةً تملأ بها قلبك.</p>
 <p>اللهم اجعلنا ممن عرفك فعبدك حق عبادتك. واملأ قلوبنا بتعظيمك حتى لا يبقى</p>
 <p>فيها مكان لغيرك. واجعل هذه الرحلة فاتحة خير وقرب ومعرفة لا</p>
 <p>تنقطع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿ذَٰلِكُمُ اللَّهُ رَبُّكُمْ لَا إِلَٰهَ إِلَّا هُوَ خَالِقُ كُلِّ شَيْءٍ فَاعْبُدُوهُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ</p>
 <p class="verse">وَكِيلٌ﴾]**</p>
-<p class="reference">(الأنعام: 102)</p>
+<p class="ref">(الأنعام: 102)</p>
 
   </div>
 </section>
 
-<section id="ch3" class="chapter">
-  <div class="chapter-header">
+<section id="ch3" class="ch">
+  <div class="chd">
     <h2>الفصل الثاني</h2>
-    <div class="chapter-subtitle">اليقظة</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">اليقظة</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">**[﴿قُلْ هُوَ الْقَادِرُ عَلَىٰ أَن يَبْعَثَ عَلَيْكُمْ عَذَابًا مِّن فَوْقِكُمْ أَوْ مِن تَحْتِ</p>
 <p class="verse">أَرْجُلِكُمْ﴾]**</p>
-<p class="reference">(الأنعام: 65)</p>
-<p class="bold-text">اليقظة</p>
+<p class="ref">(الأنعام: 65)</p>
+<p class="strong">اليقظة</p>
 <p>الأوَّل ، الآخِر ، الظاهر ، الباطن</p>
 <p>من عرف أن لله اسمًا جامعًا — بدأ يتساءل: أين كنتُ عنه كل هذا</p>
 <p>الوقت؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>أربعة أسماء جمعها النبي ﷺ في دعاء واحد:</p>
 <p>**[«اللهمَّ أنتَ الأوَّلُ فليس قبلك شيء، وأنتَ الآخِرُ فليس بعدك شيء، وأنتَ الظاهرُ</p>
 <p>فليس فوقك شيء، وأنتَ الباطنُ فليس دونك شيء»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>اقرأ هذا الدعاء ببطء. كلمة كلمة.</p>
 <p>ثم حاول أن تجد مكانًا في الوجود لا تصل إليه هذه الأسماء</p>
 <p>الأربعة.</p>
@@ -550,16 +384,16 @@ body { font-size: 16px; }
 <p>نفسك؟</p>
 <p>هذه الأسماء الأربعة لا تترك للعبد إلا مكانًا واحدًا يقف فيه: بين يدي</p>
 <p>الله.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والقرآن حين ذكر هذه الأسماء، ختمها بما يُرسّخ هذا المعنى:</p>
 <p class="verse">﴿هُوَ الْأَوَّلُ وَالْآخِرُ وَالظَّاهِرُ وَالْبَاطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾</p>
-<p class="reference">(الحديد: 3)</p>
+<p class="ref">(الحديد: 3)</p>
 <p>ختمها بالعلم. لأن الإحاطة بالزمان والمكان والقرب من كل شيء — تعني أنه</p>
 <p>يعلم كل شيء. لا يغيب عنه شيء. لا في الماضي الذي كان قبلك. ولا في</p>
 <p>المستقبل الذي سيكون بعدك. ولا فيما هو ظاهر أمام الناس. ولا فيما هو مخبوء</p>
 <p>في أعماق صدرك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>كثيرٌ منا يعيش كأنه وحده في هذا الكون.</p>
 <p>يخطّط لحياته وينسى أن الله قبل كل خططه. يقلق على المستقبل وينسى أن الله</p>
 <p>بعد كل شيء يخاف منه. يرى المشاكل تتراكم أمامه وينسى أن الله فوقها كلها.</p>
@@ -574,14 +408,14 @@ body { font-size: 16px; }
 <p>وبين المعاني حجابًا سميكًا.</p>
 <p class="verse">**[﴿لَهُمْ قُلُوبٌ لَا يَفْقَهُونَ بِهَا وَلَهُمْ أَعْيُنٌ لَا يُبْصِرُونَ بِهَا وَلَهُمْ آذَانٌ لَا يَسْمَعُونَ</p>
 <p class="verse">بِهَا﴾]**</p>
-<p class="reference">(الأعراف: 179)</p>
+<p class="ref">(الأعراف: 179)</p>
 <p>والأشدّ من الغفلة عن الله — الغفلة عن الغفلة نفسها. أن يكون الإنسان</p>
 <p>غافلًا ولا يعلم أنه غافل. يظن أنه بخير لأنه يصلي ويصوم ويحج ويتصدق. لكن</p>
 <p>قلبه في مكان آخر. قلبه مع الدنيا. مع الناس. مع همومه. مع نفسه. مع أي شيء</p>
 <p>— إلا الله.</p>
 <p>ولهذا كان أول ما يحتاجه القلب في رحلته إلى الله: أن يستيقظ.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>اليقظة ليست معلومة تتعلمها. ولا موعظة تسمعها فتتأثر بها ساعة ثم</p>
 <p>تنسى.</p>
 <p>اليقظة لحظة يرتجّ لها القلب ولا يعود بعدها كما كان.</p>
@@ -599,7 +433,7 @@ body { font-size: 16px; }
 <p>لكن هذا الانزعاج هو أول الخير. لأنه يعني أن قلبك لم يمت بعد. القلب</p>
 <p>الميت لا ينزعج. القلب الميت لا يشعر. فإن شعرت بالانزعاج حين قرأت عن حالك</p>
 <p>مع الله — فاحمد الله. هذا دليل حياة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والأسماء الأربعة — الأول والآخر والظاهر والباطن — هي مفاتيح هذه</p>
 <p>اليقظة. لأنها تهدم أربعة أوهام يعيش فيها الغافل:</p>
 <p>**الأوّل** — يهدم وهم الاستقلال. أنت لم تبدأ نفسك. ولم تخلق نفسك. ولم</p>
@@ -617,7 +451,7 @@ body { font-size: 16px; }
 <p>شيء.</p>
 <p>أربعة أوهام يعيش فيها الغافل. وأربعة أسماء تهدمها كلها دفعة</p>
 <p>واحدة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهناك أسماء أخرى تزيد هذه اليقظة عمقًا.</p>
 <p>هو المُحيي المُميت. يُحيي من يشاء ويُميت من يشاء. يبثّ الحياة في النطفة</p>
 <p>فتصبح إنسانًا يمشي ويتكلم ويفكر. ثم ينزع منه الحياة في لحظة فيصبح جسدًا</p>
@@ -640,16 +474,16 @@ body { font-size: 16px; }
 <p>وستُسأل عن كل شيء — عن صلاتك وصدقك وخلوتك وعلاقتك بالله. فماذا أعددت</p>
 <p>لذلك اليوم؟</p>
 <p class="verse">﴿كَمَا بَدَأْنَا أَوَّلَ خَلْقٍ نُّعِيدُهُ﴾</p>
-<p class="reference">(الأنبياء: 104)</p>
+<p class="ref">(الأنبياء: 104)</p>
 <p>وهو الوارث. الباقي بعد فناء كل شيء. كل ما تملكه سيعود إليه. كل ما تراه</p>
 <p>سيزول. كل من تعرفه سيمضي. ولا يبقى إلا هو. فلماذا تتعلق بما يفنى وتنسى</p>
 <p>من يبقى؟</p>
 <p class="verse">﴿كُلُّ مَنْ عَلَيْهَا فَانٍ ، وَيَبْقَىٰ وَجْهُ رَبِّكَ ذُو الْجَلَالِ وَالْإِكْرَامِ﴾</p>
-<p class="reference">(الرحمن: 26-27)</p>
+<p class="ref">(الرحمن: 26-27)</p>
 <p>المُحيي. المُميت. المُبدئ. المُعيد. الباعث. الوارث. الباقي. سبعة أسماء تقول</p>
 <p>لك: هذه الحياة ليست كل شيء. وأنت لست باقيًا هنا. والذي أوجدك سيُعيدك.</p>
 <p>فاستيقظ — قبل أن يأتي اليوم الذي لا ينفع فيه الاستيقاظ.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>واليقظة ليست شيئًا يحصل مرة واحدة ثم ينتهي. القلب يحتاج أن يُوقَظ مرارًا.</p>
 <p>لأن الغفلة تعود. والدنيا تُنسي. والنفس تُلهي.</p>
 <p>ولهذا كان النبي ﷺ يدعو بهذا الدعاء — وهو أتقى الخلق وأعرفهم بالله.</p>
@@ -657,8 +491,8 @@ body { font-size: 16px; }
 <p>المسلم الحيّ القلب هو الذي تتجدد يقظته كل يوم. كل صلاة فرصة لليقظة. كل</p>
 <p>ذكر فرصة لليقظة. كل ابتلاء فرصة لليقظة. كل نعمة فرصة لليقظة — لو فتح</p>
 <p>عينيه.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>أقرب مكان تتجلى فيه اليقظة كل يوم: الصلاة.</p>
 <p>حين تقف بين يدي الله وتقول «الله أكبر» — هل تستحضر أنك تقف أمام الأول</p>
 <p>الذي ليس قبله شيء؟ أمام الآخر الذي سترجع إليه حتمًا؟ أمام الظاهر الذي لا</p>
@@ -671,12 +505,12 @@ body { font-size: 16px; }
 <p>يقرأ الفاتحة وكأنه يسمعها لأول مرة. الذي يسجد وقلبه أقرب إلى الله من</p>
 <p>جبهته إلى الأرض.</p>
 <p class="hadith bold">«أقربُ ما يكونُ العبدُ من ربِّهِ وهو ساجد، فأكثِروا الدعاء»</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>اليقظة في الصلاة ليست أن تمنع كل خاطرة — هذا شبه مستحيل على البشر.</p>
 <p>اليقظة أن ترجع كلما شرد قلبك. أن تُعيده إلى الله مرة بعد مرة. القلب يهرب،</p>
 <p>وأنت ترده. يغفل، وأنت توقظه. هذا هو الجهاد الحقيقي.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>واجه نفسك الآن — بصدق:</p>
 <p>كم يومًا مرّ عليك وأنت لا تنتبه أنك بين يدي الله؟</p>
 <p>كم صلاة صليتها وقلبك غائب؟</p>
@@ -687,7 +521,7 @@ body { font-size: 16px; }
 <p>هذه ليست أسئلة للإجابة السريعة. هذه أسئلة للتوقف.</p>
 <p>والتوقف نفسه هو بداية اليقظة. لأنك حين تتوقف وتسأل نفسك: أين أنا من</p>
 <p>الله؟ — فقد بدأ قلبك يتحرك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>اليقظة هي أن تفتح عيني قلبك وترى ما كنت لا تراه.</p>
 <p>أن ترى الله في حياتك. قبلها وبعدها. فوقها وفي عمقها.</p>
 <p>أن تنظر إلى صلاتك فتستحي من غفلتك فيها. أن تنظر إلى ذنوبك فتتذكر أنه</p>
@@ -702,34 +536,33 @@ body { font-size: 16px; }
 <p>اللهم يا أوّل يا آخر يا ظاهر يا باطن، أيقظ قلوبنا من رقدة الغافلين.</p>
 <p>واجعلنا ممن يراك في كل شيء، ويرى يدك في كل أمر، ولا يغفل عنك طرفة</p>
 <p>عين.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">﴿هُوَ الْأَوَّلُ وَالْآخِرُ وَالظَّاهِرُ وَالْبَاطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾</p>
 
   </div>
 </section>
 
-<section id="ch4" class="chapter">
-  <div class="chapter-header">
+<section id="ch4" class="ch">
+  <div class="chd">
     <h2>الفصل الثالث</h2>
-    <div class="chapter-subtitle">المراقبة</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">المراقبة</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">﴿أَلَمْ يَعْلَمْ بِأَنَّ اللَّهَ يَرَىٰ﴾</p>
-<p class="reference">(العلق: 14)</p>
-<p class="bold-text">المراقبة</p>
+<p class="ref">(العلق: 14)</p>
+<p class="strong">المراقبة</p>
 <p>السَّمِيع ، البَصِير ، الرَّقِيب ، الشَّهِيد ، الخَبِير ، اللَّطِيف</p>
 <p>القلب الذي استيقظ... يبدأ يدرك أنه لم يكن وحده لحظة واحدة.</p>
 <p>توقّف لحظة قبل أن تقرأ. هل تشعر الآن أن الله يراك؟ اقرأ هذا الفصل وكأنك</p>
 <p>تقف بين يديه.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>في حديث جبريل، حين سأل عن الإحسان، أجابه النبي ﷺ:</p>
 <p class="hadith bold">«أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه يراك»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>في الفصل الأول تأملنا الشطر الأول: أن تعبد الله.</p>
 <p>في هذا الفصل نقف مع الشطر الثاني:</p>
-<p class="bold-text">فإنه يراك.</p>
+<p class="strong">فإنه يراك.</p>
 <p>يراك. ليست مجازًا. ليست تعبيرًا أدبيًا. الله — جل جلاله — يراك الآن.</p>
 <p>هذه اللحظة. بعينه سبحانه. رؤية حقيقية تليق بجلاله.</p>
 <p>ويسمعك. كل كلمة تقولها. وكل كلمة تقولها في نفسك ولا تحرّك بها شفتيك.</p>
@@ -738,47 +571,47 @@ body { font-size: 16px; }
 <p>كثرت.</p>
 <p class="verse">**[﴿قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ</p>
 <p class="verse">تَحَاوُرَكُمَا إِنَّ اللَّهَ سَمِيعٌ بَصِيرٌ﴾]**</p>
-<p class="reference">(المجادلة: 1)</p>
+<p class="ref">(المجادلة: 1)</p>
 <p>قالت عائشة رضي الله عنها: «الحمد لله الذي وسع سمعه الأصوات. لقد جاءت</p>
 <p>خولة بنت ثعلبة تشتكي إلى رسول الله ﷺ وإنه ليخفى عليّ بعض كلامها — فأنزل</p>
 <p>الله: قد سمع الله.»</p>
 <p>تأمّل: عائشة كانت في نفس البيت ولم تسمع كل الكلام. والله سمعه من فوق سبع</p>
 <p>سماوات.</p>
 <p>هذا هو السميع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والبصير — يرى ما لا تراه العيون. يرى النملة السوداء على الصخرة</p>
 <p>السوداء في الليلة الظلماء. يرى دمعتك التي حبستها. يرى قلبك حين ينكسر ولا</p>
 <p>يعلم به أحد.</p>
 <p class="verse">**[﴿الَّذِي يَرَاكَ حِينَ تَقُومُ ، وَتَقَلُّبَكَ فِي السَّاجِدِينَ ، إِنَّهُ هُوَ السَّمِيعُ</p>
 <p class="verse">الْعَلِيمُ﴾]**</p>
-<p class="reference">(الشعراء: 218-220)</p>
+<p class="ref">(الشعراء: 218-220)</p>
 <p>يراك حين تقوم. في صلاتك. في ليلك. في خلوتك. يرى تقلّبك — حركتك بين</p>
 <p>حالاتك، تقلّب قلبك بين الإقبال والإعراض، بين القوة والضعف، بين الخوف</p>
 <p>والرجاء.</p>
 <p>لا تمرّ عليك حالة إلا وهو يراها.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ثم هو الرقيب. والرقيب ليس فقط من يرى ويسمع، بل من يحفظ ولا يغفل.</p>
 <p>المراقبة دائمة لا تنقطع. ليس لها أوقات عمل وأوقات راحة. لا يسهو ولا ينام</p>
 <p>ولا ينشغل.</p>
 <p class="verse">﴿إِنَّ اللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا﴾</p>
-<p class="reference">(النساء: 1)</p>
+<p class="ref">(النساء: 1)</p>
 <p>وهو الشهيد. والشهيد هو الذي يشهد كل شيء ولا يغيب عنه شيء — ثم يشهد</p>
 <p>عليك يوم القيامة بما رأى. ليس شاهدًا صامتًا. هو شاهد سيتكلم. وشهادته لا</p>
 <p>تُرَدّ.</p>
 <p class="verse">﴿وَكَفَىٰ بِاللَّهِ شَهِيدًا﴾</p>
-<p class="reference">(النساء: 79)</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="ref">(النساء: 79)</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الخبير. والخبير أعمق من العليم في جانب خاص: الخبير يعلم البواطن</p>
 <p>والخفايا والدقائق التي لا يعلمها إلا من خَبَرَ الشيء من داخله. يعلم نيّتك</p>
 <p>الحقيقية وراء كل فعل. يعلم ما وراء ابتسامتك. يعلم ما وراء كلماتك</p>
 <p>الجميلة. يعلم الفرق بين ما تُظهره وما تُبطنه.</p>
 <p class="verse">﴿وَهُوَ الْحَكِيمُ الْخَبِيرُ﴾</p>
-<p class="reference">(الأنعام: 18)</p>
+<p class="ref">(الأنعام: 18)</p>
 <p>وهو اللطيف. واللطيف هنا لا يعني فقط الرفق — بل يعني من يعلم دقائق</p>
 <p>الأمور وخفاياها، ثم يصل إليك برفق من حيث لا تحتسب. يعلم تفاصيل حياتك</p>
 <p>التي لم تقلها لأحد، ثم يدبّرها لك بلطف لا تدركه إلا بعد حين.</p>
 <p class="verse">﴿لَا تُدْرِكُهُ الْأَبْصَارُ وَهُوَ يُدْرِكُ الْأَبْصَارَ وَهُوَ اللَّطِيفُ الْخَبِيرُ﴾</p>
-<p class="reference">(الأنعام: 103)</p>
+<p class="ref">(الأنعام: 103)</p>
 <p>ستة أسماء. كل واحد منها يقول لك الحقيقة نفسها بطريقة</p>
 <p>مختلفة:</p>
 <p>لستَ وحدك. ولم تكن وحدك يومًا. والله يعلم منك ما لا تعلمه أنت من</p>
@@ -810,9 +643,9 @@ body { font-size: 16px; }
 <p>تشعر. ويصرف عنك وأنت لا تدري. فإن كان يحفظك بهذا القدر — ألا يستحق أن</p>
 <p>تحفظ حدوده؟</p>
 <p class="verse">﴿لَهُ مُعَقِّبَاتٌ مِّن بَيْنِ يَدَيْهِ وَمِنْ خَلْفِهِ يَحْفَظُونَهُ مِنْ أَمْرِ اللَّهِ﴾</p>
-<p class="reference">(الرعد: 11)</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<p class="ref">(الرعد: 11)</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>تخيّل أنك تعلم — بيقين — أن أحدًا يراقبك الآن.</p>
 <p>شخص تهابه. شخص يعني لك رأيه. شخص لا تريد أن يراك في لحظات</p>
 <p>ضعفك.</p>
@@ -821,7 +654,7 @@ body { font-size: 16px; }
 <p>ستراجع نفسك عشر مرات قبل أن تخطئ.</p>
 <p>هذا ما يفعله حضور مخلوق واحد.</p>
 <p>فكيف لو استقر في قلبك — حقًا — أن الله هو الذي يراقبك؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>المشكلة ليست أننا لا نعلم أن الله يرانا. كلنا نعلم ذلك. المشكلة أن هذا</p>
 <p>العلم لا يعمل.</p>
 <p>نعلم أنه يرانا — ونعصيه. نعلم أنه يسمعنا — ونتكلم بما لا يرضيه.</p>
@@ -838,7 +671,7 @@ body { font-size: 16px; }
 <p>ليس المقصود الذنب فقط. بل الغفلة. تلك اللحظات التي تمرّ عليك وأنت لا</p>
 <p>تستحضر أنك بين يدي الله. هذا الاسم يُريك المسافة بين ما تعرفه وما</p>
 <p>تعيشه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>تأمّل في حياتك اليومية:</p>
 <p>حين تكون وحدك مع هاتفك في الليل — هل تستحضر أن البصير</p>
 <p>يراك؟</p>
@@ -850,8 +683,8 @@ body { font-size: 16px; }
 <p>هذه ليست أسئلة نظرية. هذه لحظاتك. كل يوم. كل ساعة.</p>
 <p>والفرق بين حياة الغافل وحياة المراقب — يُصنع في هذه اللحظات</p>
 <p>بالذات.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>المراقبة — عند أهل العلم — هي دوام علم القلب بأن الله مطّلع</p>
 <p>عليه.</p>
 <p>ليست فكرة تمر في الذهن مرة ثم تذهب. بل حالة تسكن القلب فتؤثر في كل شيء:</p>
@@ -873,7 +706,7 @@ body { font-size: 16px; }
 <p>منه حين تمر في ذهنك فكرة لا ترضيه. أن تراجع نيتك قبل كل عمل. أن تتفقد</p>
 <p>قلبك: هل فيه رياء؟ هل فيه حسد؟ هل فيه كبر؟ هل فيه تعلق بغير الله؟ هذه</p>
 <p>مراقبة القلب — وهي أصعب وأشرف.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ولعل أعمق ما في مقام المراقبة أنه يُصلح الخلوة.</p>
 <p>الخلوة هي المحك الحقيقي. لأن الإنسان أمام الناس قد يتجمّل. قد يمتنع عن</p>
 <p>المعصية حياءً من الخلق. قد يُظهر الطاعة رغبةً في مدحهم. لكن حين يخلو بنفسه</p>
@@ -883,12 +716,12 @@ body { font-size: 16px; }
 <p>**[«لأعلمنّ أقوامًا من أمتي يأتون يوم القيامة بحسنات أمثال جبال تهامة</p>
 <p>بيضاء، فيجعلها الله هباءً منثورًا. هم أقوام من جلدتكم، ويأخذون من الليل</p>
 <p>كما تأخذون، لكنهم قوم إذا خلوا بمحارم الله انتهكوها»]**</p>
-<p class="reference">(رواه ابن ماجه، وصحّحه الألباني)</p>
+<p class="ref">(رواه ابن ماجه، وصحّحه الألباني)</p>
 <p>إذا خلوا. حين ظنوا أن لا أحد يرى. حين نسوا أن الرقيب لا</p>
 <p>ينام.</p>
 <p>المراقبة تُصلح هذا كله. لأنها تجعل خلوتك كجلوتك. لا يتغير سلوكك بين حضور</p>
 <p>الناس وغيابهم — لأنك تعلم أن الذي يراقبك لا يغيب.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وللمراقبة أثر آخر لا يقل أهمية: أنها تُصلح العبادة نفسها.</p>
 <p>كثيرون يؤدون العبادة — لكن بلا روح. يصلون ويصومون ويتصدقون — لكن</p>
 <p>بقلوب غائبة. المراقبة هي التي تُحضر القلب في العبادة.</p>
@@ -896,8 +729,8 @@ body { font-size: 16px; }
 <p>تسجد وتستحضر أن البصير يراك — سيتغير سجودك. حين تدعو وتستحضر أن الشهيد</p>
 <p>يشهد دمعتك — سيتغير دعاؤك.</p>
 <p>المراقبة ليست قيدًا على العبادة. هي روحها.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>هناك بُعد في المراقبة ينساه كثيرون.</p>
 <p>المراقبة لا تعني فقط أن الله يراقبك ليحاسبك. بل تعني أيضًا أنه يراقبك</p>
 <p>ليرعاك.</p>
@@ -906,7 +739,7 @@ body { font-size: 16px; }
 <p>ليخفّفه عنك. يعلم ما تحتاجه قبل أن تسأله. يعلم ما يصلحك فيسوقه إليك من</p>
 <p>حيث لا تحتسب.</p>
 <p class="verse">﴿اللَّهُ لَطِيفٌ بِعِبَادِهِ يَرْزُقُ مَن يَشَاءُ وَهُوَ الْقَوِيُّ الْعَزِيزُ﴾</p>
-<p class="reference">(الشورى: 19)</p>
+<p class="ref">(الشورى: 19)</p>
 <p>كم مرة حصل لك شيء ظننته صدفة — ثم اكتشفت بعد سنوات أنه كان أعظم نعمة</p>
 <p>في حياتك؟ كم مرة أُغلق أمامك باب وأنت تريده بشدة — ثم فُتح لك باب أفضل</p>
 <p>منه بكثير؟ كم مرة ابتُليت بشيء فاكتشفت أنه أصلح فيك ما كان</p>
@@ -918,10 +751,10 @@ body { font-size: 16px; }
 <p>به.</p>
 <p>المراقبة في أعلى درجاتها ليست خوفًا. هي طمأنينة. طمأنينة من يعلم أنه في</p>
 <p>عين الله.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>سؤالان اثنان. أجب عنهما بصدق:</p>
-<p class="bold-text">الأول: من أنت حين تكون وحدك؟</p>
+<p class="strong">الأول: من أنت حين تكون وحدك؟</p>
 <p>حين تُغلق الباب. حين تُطفئ الشاشة. حين لا يراك أحد من الخلق. من أنت في</p>
 <p>تلك اللحظة؟ هل أنت نفس الشخص الذي يراه الناس؟ أم يظهر شخص</p>
 <p>آخر؟</p>
@@ -929,7 +762,7 @@ body { font-size: 16px; }
 <p>— ما الذي تخشى أن يُعرض فيه؟]**</p>
 <p>هذا السؤال ليس للتخويف. هو للمصارحة. لأن المراقبة الحقيقية تبدأ من</p>
 <p>المصارحة مع النفس.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>لكن لا تقف عند الخوف فقط.</p>
 <p>تذكّر أن الذي يراك — هو نفسه اللطيف. هو نفسه الذي يعلم ضعفك ولا يطردك.</p>
 <p>يرى تقصيرك ولا يقطع عنك رزقه. يسمع ذنبك ولا يفضحك. يراقبك بعلمه — وفي</p>
@@ -940,7 +773,7 @@ body { font-size: 16px; }
 <p>ولهذا كان أهل المراقبة أكثر الناس راحة. لأنهم لا يحملون وجهين. ولا</p>
 <p>يعيشون حياتين. ظاهرهم كباطنهم. وسرّهم كعلانيتهم. وهذا أعظم أسباب</p>
 <p>الراحة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>القلب الذي استيقظ في الفصل الماضي — بدأ الآن يُبصر.</p>
 <p>بدأ يرى أن الله معه. أن عينًا لا تنام تراه. وأذنًا لا تغفل تسمعه. وعلمًا</p>
 <p>لا يخفى عليه شيء يحيط به.</p>
@@ -956,28 +789,27 @@ body { font-size: 16px; }
 <p>تكلنا إلى أنفسنا طرفة عين. يا رقيب يا شهيد، يا لطيف يا خبير — أصلح ما</p>
 <p>بيننا وبينك، وأصلح ما بيننا وبين أنفسنا. واجعل علمك بنا سببًا لرحمتك لنا،</p>
 <p>لا لعقوبتك علينا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿وَاعْلَمُوا أَنَّ اللَّهَ يَعْلَمُ مَا فِي أَنفُسِكُمْ فَاحْذَرُوهُ وَاعْلَمُوا أَنَّ اللَّهَ غَفُورٌ</p>
 <p class="verse">حَلِيمٌ﴾]**</p>
-<p class="reference">(البقرة: 235)</p>
+<p class="ref">(البقرة: 235)</p>
 
   </div>
 </section>
 
-<section id="ch5" class="chapter">
-  <div class="chapter-header">
+<section id="ch5" class="ch">
+  <div class="chd">
     <h2>الفصل الرابع</h2>
-    <div class="chapter-subtitle">الحياء</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الحياء</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">﴿وَاللَّهُ يَعْلَمُ مَا تُسِرُّونَ وَمَا تُعْلِنُونَ﴾</p>
-<p class="reference">(النحل: 19)</p>
-<p class="bold-text">الحياء</p>
+<p class="ref">(النحل: 19)</p>
+<p class="strong">الحياء</p>
 <p>الحَيِيّ ، السِّتِّير ، الكَرِيم ، العَفُوّ</p>
 <p>حين يثبت في قلبك أن الله يراك — يصبح الذنب ثقيلًا.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>في الفصل الماضي عرفت أن الله يراك ويسمعك ويعلم سرّك. عرفت أنك لست وحدك</p>
 <p>لحظة واحدة.</p>
 <p>الآن تأمّل في هذا السؤال:</p>
@@ -986,7 +818,7 @@ body { font-size: 16px; }
 <p>ثم يكرمك رغم كل ما يعلمه عنك.</p>
 <p>هذا هو الحيي سبحانه.</p>
 <p class="hadith bold">«إنَّ اللهَ حَيِيٌّ سِتِّيرٌ، يحبُّ الحياءَ والسِّتر»</p>
-<p class="reference">(رواه أبو داود والنسائي)</p>
+<p class="ref">(رواه أبو داود والنسائي)</p>
 <p>الله حييّ. تأمّل في هذا. الملك الذي يملك كل شيء، والجبار الذي لا يُغلب،</p>
 <p>والقهار الذي لا يُرد أمره — وصف نفسه بأنه حييّ.</p>
 <p>والحياء من الله ليس كحياء المخلوق. حياء المخلوق ضعف أحيانًا. لكن حياء</p>
@@ -995,12 +827,12 @@ body { font-size: 16px; }
 <p>يمهله.</p>
 <p>**[«إنَّ اللهَ حَيِيٌّ كريمٌ، يستحيي إذا رفع الرجلُ إليه يديه أن يردَّهما صِفرًا</p>
 <p>خائبتَيْن»]**</p>
-<p class="reference">(رواه أبو داود والترمذي)</p>
+<p class="ref">(رواه أبو داود والترمذي)</p>
 <p>تأمّل: أنت ترفع يديك إلى الله وأنت مقصّر. أنت تدعوه وأنت تعلم كم عصيته.</p>
 <p>ومع ذلك — يستحي سبحانه أن يخيّب رجاءك. يستحي أن يرد يديك</p>
 <p>فارغتين.</p>
 <p>هذا هو إلهك. فكيف لا تستحي أنت منه؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الستّير. الذي يستر عبده في الدنيا والآخرة.</p>
 <p>تأمّل في ذنب فعلته — ولا يعلم به أحد من الناس. لا أحد رآك. لا أحد</p>
 <p>سمعك. لا أحد يعلم.</p>
@@ -1014,11 +846,11 @@ body { font-size: 16px; }
 <p>**[«يدنو أحدُكم من ربِّه حتى يضع كنفَه عليه فيقول: أعملتَ كذا وكذا؟ فيقول:</p>
 <p>نعم. فيقول: أعملتَ كذا وكذا؟ فيقول: نعم. فيقرِّره، ثم يقول: إني سترتُ عليك</p>
 <p>في الدنيا، وأنا أغفرها لك اليوم»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>سترتُ عليك في الدنيا، وأنا أغفرها لك اليوم.</p>
 <p>ستر في الدنيا. ومغفرة في الآخرة. من ربٍّ كريم لا يعامل عبده بما يستحق —</p>
 <p>بل يعامله بما هو أهله سبحانه: الكرم.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الكريم. والكرم هنا ليس كرم العطاء فقط — بل كرم</p>
 <p>المعاملة.</p>
 <p>الكريم هو الذي يعطي من غير مسألة. ويصفح من غير عتاب. ويعامل عبده بأحسن</p>
@@ -1029,16 +861,16 @@ body { font-size: 16px; }
 <p>مع الجحود. بل يستمر حتى مع المعصية. تأكل رزقه وتعصيه بنعمته — ولا</p>
 <p>يقطعها عنك.</p>
 <p class="verse">﴿وَإِنَّ رَبَّكَ لَذُو فَضْلٍ عَلَى النَّاسِ وَلَٰكِنَّ أَكْثَرَهُمْ لَا يَشْكُرُونَ﴾</p>
-<p class="reference">(النمل: 73)</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="ref">(النمل: 73)</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو العفو. والعفو ليس فقط أن يغفر — بل أن يمحو. الغفران قد يبقي الأثر</p>
 <p>ويتجاوز عنه. لكن العفو يمحو الذنب كأنه لم يكن.</p>
 <p class="verse">﴿إِنَّ اللَّهَ كَانَ عَفُوًّا غَفُورًا﴾</p>
-<p class="reference">(النساء: 43)</p>
+<p class="ref">(النساء: 43)</p>
 <p>والله يحب أن يُسأل العفو. النبي ﷺ علّم عائشة رضي الله عنها أن تدعو في</p>
 <p>أعظم ليلة في العام:</p>
 <p class="hadith bold">«اللهم إنك عفوٌّ تحبُّ العفوَ فاعفُ عنّي»</p>
-<p class="reference">(رواه الترمذي وابن ماجه)</p>
+<p class="ref">(رواه الترمذي وابن ماجه)</p>
 <p>يحب العفو. ليس فقط يعفو — بل يحب أن يعفو. كأن العفو يُفرحه سبحانه. كأن</p>
 <p>رجوعك إليه أحب إليه من بقائك على ذنبك.</p>
 <p>قال الفضيل بن عياض رحمه الله: «إذا لم تستحِ من الله في السرّ فلست تعرفه.»</p>
@@ -1046,8 +878,8 @@ body { font-size: 16px; }
 <p>بالذنب.</p>
 <p>أربعة أسماء. الحيي والستير والكريم والعفو. كلها تقول لك شيئًا واحدًا: ربك</p>
 <p>يعاملك بما لا تستحق — فهل تستحي أنت منه؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>تأمّل في مشهد يتكرر كل يوم:</p>
 <p>أنت تعصي الله في السر. في خلوتك. في ساعة ضعفك. ثم تخرج إلى الناس —</p>
 <p>وسترُ الله عليك كامل. لا أحد يعلم. لا أحد يشك. صورتك أمامهم</p>
@@ -1058,7 +890,7 @@ body { font-size: 16px; }
 <p>والسؤال الذي يجب أن يؤلمك هو:</p>
 <p>**[أليس من الجحود أن تستخدم ستره عليك لتزداد جرأة على</p>
 <p>معصيته؟]**</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>هذا هو الفرق بين من يعرف أن الله يستره — فيستحي، ومن يعرف أن الله</p>
 <p>يستره — فيتمادى.</p>
 <p>الأول: يرى الستر فيقول: كيف أعصي من يسترني هكذا؟ الذنب يُصبح ثقيلًا عليه</p>
@@ -1067,10 +899,10 @@ body { font-size: 16px; }
 <p>الثاني: يرى الستر فيقول: ما دام لم يفضحني فلن يفضحني. فيأمن. والأمن من</p>
 <p>مكر الله خطر عظيم.</p>
 <p class="verse">﴿أَفَأَمِنُوا مَكْرَ اللَّهِ فَلَا يَأْمَنُ مَكْرَ اللَّهِ إِلَّا الْقَوْمُ الْخَاسِرُونَ﴾</p>
-<p class="reference">(الأعراف: 99)</p>
+<p class="ref">(الأعراف: 99)</p>
 <p>الستر ليس إذنًا بالمعصية. الستر فرصة للرجوع. الله يسترك ليعطيك مهلة —</p>
 <p>لا ليعطيك رخصة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والحياء الحقيقي لا ينبع فقط من الخوف. بل ينبع من رؤية</p>
 <p>التفاوت.</p>
 <p>التفاوت بين ما يعطيك الله وما تقدمه له. التفاوت بين إحسانه إليك وإساءتك</p>
@@ -1079,12 +911,12 @@ body { font-size: 16px; }
 <p>حياء ممزوج بالمحبة. حياء ممزوج بالامتنان. حياء يقول: أنا لا أستحق هذا</p>
 <p>الكرم — فكيف أقابله بالمعصية؟</p>
 <p>هذا هو الحياء من الله. وهو أرفع أنواع الحياء.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الحياء من الله ليس مجرد شعور عابر. هو مقام إيماني يسكن القلب ويؤثر في</p>
 <p>كل شيء.</p>
 <p class="hadith bold">«الحياء لا يأتي إلا بخير»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>والحياء من الله له علامات واضحة:</p>
 <p>أن تحفظ رأسك وما وعى — عينيك وأذنيك ولسانك وعقلك. ماذا تنظر؟ ماذا</p>
 <p>تسمع؟ ماذا تتكلم؟ فيم تفكر؟ كل هذا تحت مظلة الحياء.</p>
@@ -1094,7 +926,7 @@ body { font-size: 16px; }
 <p>عليه اليوم.</p>
 <p>هذا هو الحياء الحقيقي. ليس خجلًا. ليس ضعفًا. هو وعي دائم بأنك أمام الله</p>
 <p>— فتتصرف على هذا الأساس في كل تفصيل من تفاصيل حياتك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والحياء من الله له مراتب:</p>
 <p>**أدناها:** أن تستحي من المعصية الظاهرة. أن تمتنع عن الحرام البيّن لأنك</p>
 <p>تعلم أنه يراك.</p>
@@ -1103,8 +935,8 @@ body { font-size: 16px; }
 <p>**وأعلاها:** أن تستحي من الغفلة. أن تستحي حين تمر ساعة من عمرك لم تذكره</p>
 <p>فيها. أن تستحي حين يمرّ على قلبك خاطر لا يليق بعظمته. هذا حياء</p>
 <p>العارفين.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>تأمّل في هذا المشهد من يوم القيامة:</p>
 <p>يدنيك الله منه. يضع ستره عليك. لا يراك أحد. ثم يقرّرك بذنوبك واحدًا</p>
 <p>واحدًا. تقول: نعم. نعم. نعم. تظن أنك هلكت.</p>
@@ -1117,21 +949,21 @@ body { font-size: 16px; }
 <p>على نفسه بالمجاهرة — فقد المعاملة التي يعامل الله بها من يستحي</p>
 <p>منه.</p>
 <p class="hadith bold">«كلُّ أمتي مُعافًى إلا المُجاهِرين»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>المجاهر: من يسترُ الله عليه ثم يُصبح فيقول: فعلتُ البارحة كذا وكذا. يبيت</p>
 <p>يستره ربه ويصبح يكشف ستر الله عليه.</p>
 <p>المجاهرة ليست مجرد ذنب. هي رفض للستر. واستخفاف بالحيي الستير. وهذا أشد</p>
 <p>على القلب من الذنب نفسه.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>سؤالان:</p>
 <p>**[الأول: كم ذنب سترَه الله عليك — ولو كُشف لما نظر إليك الناس كما</p>
 <p>ينظرون إليك الآن؟]**</p>
 <p>لا تبحث عن العدد. ابحث عن الشعور. هل تشعر بثقل هذا الستر؟ هل تشعر بعظمة</p>
 <p>هذه النعمة؟</p>
-<p class="bold-text">الثاني: ماذا قدمت مقابل هذا الستر؟</p>
+<p class="strong">الثاني: ماذا قدمت مقابل هذا الستر؟</p>
 <p>هل شكرته؟ هل استحييت منه؟ هل ازددت قربًا — أم ازددت جرأة؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>الحياء من الله ليس أن تخجل لحظة ثم تنسى. الحياء أن يسكن في قلبك شعور</p>
 <p>دائم بأنك مقصّر — وأن الله مع ذلك كريم معك. هذا الشعور لا يُهينك. بل</p>
 <p>يُقربك. لأنك حين تعرف قدر تقصيرك وقدر كرمه — تُحبه أكثر. وتعرف أنك بحاجة</p>
@@ -1148,21 +980,20 @@ body { font-size: 16px; }
 <p>سترك علينا سببًا لرجوعنا إليك لا سببًا لجرأتنا عليك. يا كريم يا عفوّ،</p>
 <p>عاملنا بما أنت أهله ولا تعاملنا بما نحن أهله. واغفر لنا ما علمت منا،</p>
 <p>واعفُ عمّا لا يعلمه أحد إلا أنت.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿يَسْتَخْفُونَ مِنَ النَّاسِ وَلَا يَسْتَخْفُونَ مِنَ اللَّهِ وَهُوَ مَعَهُمْ إِذْ يُبَيِّتُونَ مَا لَا يَرْضَىٰ</p>
 <p class="verse">مِنَ الْقَوْلِ وَكَانَ اللَّهُ بِمَا يَعْمَلُونَ مُحِيطًا﴾]**</p>
-<p class="reference">(النساء: 108)</p>
+<p class="ref">(النساء: 108)</p>
 
   </div>
 </section>
 
-<section id="ch6" class="chapter">
-  <div class="chapter-header">
+<section id="ch6" class="ch">
+  <div class="chd">
     <h2>الفصل الخامس</h2>
-    <div class="chapter-subtitle">الافتقار</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الافتقار</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p>تخيّل أنك تمشي في صحراء.</p>
 <p>لا ماء. لا ظل. لا طريق. الشمس فوقك والرمل تحتك وأنت وحدك. لا أحد يسمعك</p>
 <p>لو صرخت. ولا أحد يراك لو سقطت.</p>
@@ -1172,11 +1003,11 @@ body { font-size: 16px; }
 <p>بيقين — أن أحدًا وضعه لك هناك؟</p>
 <p>هذا المشهد هو حالك مع الله — لكنك لا تراه. لأنك لم تشعر بالصحراء</p>
 <p>بعد.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿يَا أَيُّهَا النَّاسُ أَنتُمُ الْفُقَرَاءُ إِلَى اللَّهِ وَاللَّهُ هُوَ الْغَنِيُّ</p>
 <p class="verse">الْحَمِيدُ﴾]**</p>
-<p class="reference">(فاطر: 15)</p>
-<p class="bold-text">الافتقار والتوكل</p>
+<p class="ref">(فاطر: 15)</p>
+<p class="strong">الافتقار والتوكل</p>
 <p>الرَّزَّاق ، الوَكِيل ، الكَافِي ، المُقِيت ، الصَّمَد ، الغَنِيّ</p>
 <p>من استحيا من الله عرف تقصيره... ومن عرف تقصيره عرف أنه لا يملك لنفسه</p>
 <p>شيئًا.</p>
@@ -1186,8 +1017,8 @@ body { font-size: 16px; }
 <p>العبد إلى ربه أمرٌ ذاتيّ لا ينفكّ عنه بحال.» يعني: أنت لا تختار أن تفتقر</p>
 <p>إلى الله — أنت مفتقر إليه بطبيعتك. السؤال فقط: هل تعترف بهذا الفقر أم</p>
 <p>تتجاهله؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>هل جرّبت يومًا أن تمدّ يدك لشيء تحتاجه — فتكتشف أنك لا تملك</p>
 <p>شيئًا؟</p>
 <p>عرفت أن الله هو الإله الحق. ثم استيقظت من غفلتك. ثم انتبهت أنه يراك. ثم</p>
@@ -1195,8 +1026,8 @@ body { font-size: 16px; }
 <p>والآن — بعد كل هذا — تسأل: ماذا أفعل؟ كيف أستقيم؟ كيف أثبت على</p>
 <p>الطريق؟</p>
 <p>والجواب هو أصعب جواب يسمعه الإنسان:</p>
-<p class="bold-text">لا تستطيع. ليس وحدك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="strong">لا تستطيع. ليس وحدك.</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>أنت فقير إلى الله. فقرًا حقيقيًا. ليس فقر من ينقصه المال فقط. بل فقر من</p>
 <p>لا يملك شيئًا — لا شيءَ على الإطلاق — إلا من الله.</p>
 <p class="verse">**[﴿يَا أَيُّهَا النَّاسُ أَنتُمُ الْفُقَرَاءُ إِلَى اللَّهِ وَاللَّهُ هُوَ الْغَنِيُّ</p>
@@ -1209,7 +1040,7 @@ body { font-size: 16px; }
 <p>صحتكم وعافيتكم وعقولكم وأولادكم وحياتكم كلها.</p>
 <p>كل شيء عندك — كل شيء — معار. ليس ملكًا لك. هو من الله. وإلى الله.</p>
 <p>ولو شاء سحبه منك في لحظة ولن يقدر أحد على رده.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وفي المقابل — الله هو الغني. الغنى المطلق الذي لا يحتاج إلى شيء ولا</p>
 <p>إلى أحد.</p>
 <p>لا يحتاج إلى عبادتك. لا يحتاج إلى شكرك. لا يحتاج إلى طاعتك. لا ينقصه</p>
@@ -1219,17 +1050,17 @@ body { font-size: 16px; }
 <p>واحدٍ منكم، ما زاد ذلك في مُلكي شيئًا. يا عبادي، لو أنَّ أوَّلكم وآخركم وإنسكم</p>
 <p>وجنَّكم كانوا على أفجرِ قلبِ رجلٍ واحدٍ منكم، ما نقَصَ ذلك من مُلكي</p>
 <p>شيئًا»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>أنت الفقير. وهو الغني. هذه هي المعادلة الأساسية في الوجود</p>
 <p>كله.</p>
 <p>وحين تفهم هذه المعادلة — يتغير كل شيء.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الصمد. الذي يُصمد إليه في الحوائج كلها. يلجأ إليه كل شيء —</p>
 <p>الملائكة والأنبياء والسماوات والأرض — ولا يلجأ هو إلى شيء.</p>
 <p class="verse">﴿اللَّهُ الصَّمَدُ﴾</p>
-<p class="reference">(الإخلاص: 2)</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<p class="ref">(الإخلاص: 2)</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>المشكلة أننا نعيش كأننا أغنياء.</p>
 <p>يظن أحدنا أنه يملك أمره. يخطط. يحسب. يتوقع. يبني. وينسى أنه لا يملك</p>
 <p>الدقيقة التالية.</p>
@@ -1240,7 +1071,7 @@ body { font-size: 16px; }
 <p>سببًا هو الله. والذي يمنع السبب من العمل هو الله. كم من ذكي فشل. وكم من</p>
 <p>قوي سقط. وكم من غني افتقر. وكم من معافى مرض فجأة.</p>
 <p>الأسباب في يد الله — لا في يدك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الرزّاق. والرزاق ليس فقط من يُعطي المال. الرزق أوسع من ذلك</p>
 <p>بكثير.</p>
 <p>الهواء الذي تتنفسه — رزق. الماء الذي تشربه — رزق. الصحة — رزق.</p>
@@ -1250,7 +1081,7 @@ body { font-size: 16px; }
 <p>كل نعمة تراها ولا تراها — رزق من الرزاق.</p>
 <p class="verse">**[﴿وَمَا مِن دَابَّةٍ فِي الْأَرْضِ إِلَّا عَلَى اللَّهِ رِزْقُهَا وَيَعْلَمُ مُسْتَقَرَّهَا</p>
 <p class="verse">وَمُسْتَوْدَعَهَا﴾]**</p>
-<p class="reference">(هود: 6)</p>
+<p class="ref">(هود: 6)</p>
 <p>على الله رزقها. لم يقل: على الإنسان أن يرزق نفسه. ولم يقل: على الأسباب.</p>
 <p>قال: على الله. تكفّل به. التزم به. ضمنه.</p>
 <p>وهو الوهّاب. الذي يهب بلا سبب أحيانًا. بلا مقدمات. بلا توقع منك. يفاجئك</p>
@@ -1259,8 +1090,8 @@ body { font-size: 16px; }
 <p>والقابض الباسط — يقبض الرزق أحيانًا ليعلّمك الفقر إليه. ويبسطه أحيانًا</p>
 <p>ليعلّمك الشكر. القبض والبسط كلاهما رحمة — لكنك لا ترى ذلك إلا إن عرفت</p>
 <p>أنه هو المدبّر.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الافتقار إلى الله ليس ذلًّا يُكره عليه الإنسان. هو أشرف مقام يقوم فيه</p>
 <p>القلب.</p>
 <p>لأن الافتقار إلى الله تحرّر من الافتقار إلى كل ما سواه.</p>
@@ -1271,7 +1102,7 @@ body { font-size: 16px; }
 <p>تكفّل الله بجميع حوائجه، وحمل عنه كل مؤنة، وفرّغ قلبه لمحبته، ولسانه</p>
 <p>لذكره.»</p>
 <p>وهذا هو جوهر التوكل.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>التوكل ليس ترك الأسباب. التوكل أن تأخذ بالأسباب ثم تُعلّق قلبك بالله لا</p>
 <p>بالأسباب.</p>
 <p>أن تزرع ولا تعتمد على الزرع. أن تتداوى ولا تعتمد على الدواء. أن تعمل</p>
@@ -1281,30 +1112,30 @@ body { font-size: 16px; }
 <p>فيتولاه. ليس وكيلًا ضعيفًا قد يخذلك. بل وكيل يملك كل شيء ويقدر على كل شيء</p>
 <p>ولا يُعجزه شيء.</p>
 <p class="verse">﴿وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ﴾</p>
-<p class="reference">(الطلاق: 3)</p>
+<p class="ref">(الطلاق: 3)</p>
 <p>حسبه. يكفيه. يغنيه عن كل ما سواه.</p>
 <p>وهو الكافي. الذي يكفي من توكل عليه من كل هم وكل خوف وكل</p>
 <p>حاجة.</p>
 <p class="verse">﴿أَلَيْسَ اللَّهُ بِكَافٍ عَبْدَهُ﴾</p>
-<p class="reference">(الزمر: 36)</p>
+<p class="ref">(الزمر: 36)</p>
 <p>سؤال من الله لك: ألست أكفيك؟ ألست أغنيك؟ فلماذا تلجأ إلى غيري؟ فلماذا</p>
 <p>تخاف من غيري؟ فلماذا تعلّق قلبك بمن لا يملك لك نفعًا ولا ضرًا — وتترك من</p>
 <p>بيده كل شيء؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المُقيت. والمقيت هو الذي يُوصل إلى كل مخلوق ما يقوته ويحفظ حياته. لا</p>
 <p>ينسى أحدًا من خلقه. لا ينسى نملة في جحرها. ولا سمكة في قاع البحر. ولا</p>
 <p>جنينًا في بطن أمه. كلهم يُقاتهم ويحفظهم.</p>
 <p class="verse">﴿وَكَانَ اللَّهُ عَلَىٰ كُلِّ شَيْءٍ مُّقِيتًا﴾</p>
-<p class="reference">(النساء: 85)</p>
+<p class="ref">(النساء: 85)</p>
 <p>إذا كان الله لا ينسى نملة — فهل ينساك أنت؟</p>
 <p>إذا كان يُقيت كل مخلوق بما يحتاجه — فهل يُضيعك وأنت تلجأ</p>
 <p>إليه؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والمُغني — الذي يُغني من يشاء بفضله. وغناه ليس دائمًا بالمال. أحيانًا</p>
 <p>يُغنيك بالقناعة. وأحيانًا يُغنيك بالرضا. وأحيانًا يُغنيك بأن يصرف عنك حاجةً</p>
 <p>كنت تظنها ضرورة فإذا هي لم تكن كذلك.</p>
 <p class="hadith bold">«ليس الغنى عن كثرة العَرَض، ولكنّ الغنى غنى النفس»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>غنى النفس هو أن يكون قلبك غنيًا بالله. من كان قلبه غنيًا بالله — لم</p>
 <p>يفتقر إلى شيء ولو كان أقل الناس مالًا. ومن كان قلبه فقيرًا من الله — لم</p>
 <p>يشبع بشيء ولو ملك الدنيا كلها.</p>
@@ -1315,7 +1146,7 @@ body { font-size: 16px; }
 <p>وهو الواجد — الغني الذي لا يفتقر إلى شيء. وُجده — أي غناه — كامل</p>
 <p>لا ينقص. كل ما عنده حاضر لا يغيب. وهذا يعني أنك حين تسأله — تسأل من</p>
 <p>عنده كل شيء ولا ينقصه شيء بعطائه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وفي صلب الافتقار والتوكل يظهر اسمان عظيمان: الحيّ القيّوم.</p>
 <p>قال بعض السلف: «التوكل ليس أن تترك العمل، بل أن تعمل وقلبك متعلق بالله</p>
 <p>لا بالعمل.» وهذا أدقّ ما قيل في معنى التوكل.</p>
@@ -1325,7 +1156,7 @@ body { font-size: 16px; }
 <p>القيوم — القائم بنفسه المُقيم لغيره. هو القائم على كل نفس بما كسبت. لو</p>
 <p>رفع قيوميته عن الخلق لحظة لانهار الكون كله.</p>
 <p class="verse">﴿اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ﴾</p>
-<p class="reference">(البقرة: 255)</p>
+<p class="ref">(البقرة: 255)</p>
 <p>أنت تنام — وهو لا ينام. تضعف — وهو لا يضعف. تغفل — وهو لا يغفل.</p>
 <p>تعجز — وهو لا يعجز. هذا هو من تتوكل عليه. فكيف يخيب من اعتمد على الحي</p>
 <p>القيوم؟</p>
@@ -1339,16 +1170,16 @@ body { font-size: 16px; }
 <p>والله لا يُنكر عليك ضعفك — بل يحب أن تأتيه معترفًا بافتقارك.</p>
 <p>ولهذا كان النبي ﷺ يقول في دعاء الكرب:</p>
 <p class="hadith bold">«يا حيُّ يا قيُّوم، برحمتك أستغيث»</p>
-<p class="reference">(رواه الترمذي)</p>
+<p class="ref">(رواه الترمذي)</p>
 <p>في لحظة الكرب — لا ينفعك إلا من هو حيّ لا يموت، قيّوم لا</p>
 <p>يغفل.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>أعمق صور الافتقار إلى الله: الافتقار إليه في الهداية.</p>
 <p>أنت لا تحتاج الله فقط ليرزقك ويحفظك ويعافيك. أنت تحتاجه ليثبّت قلبك. لأن</p>
 <p>قلبك بين أصبعين من أصابعه يقلّبه كيف يشاء.</p>
 <p class="hadith bold">«يا مقلّب القلوب ثبّت قلبي على دينك»</p>
-<p class="reference">(رواه الترمذي)</p>
+<p class="ref">(رواه الترمذي)</p>
 <p>هذا دعاء النبي ﷺ — أتقى الخلق. كان يخاف على قلبه. كان يعلم أن الثبات</p>
 <p>ليس بيده. فكيف بنا؟</p>
 <p>كم من إنسان كان مستقيمًا ثم انحرف. كم من حافظ للقرآن نسيه. كم من عابد</p>
@@ -1360,10 +1191,10 @@ body { font-size: 16px; }
 <p>واحدة.</p>
 <p>هذا هو أعمق وجوه الافتقار: أن تفتقر إلى الله في أن يحفظ لك</p>
 <p>إيمانك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>سؤال واحد:</p>
-<p class="bold-text">على ماذا تعتمد الآن؟</p>
+<p class="strong">على ماذا تعتمد الآن؟</p>
 <p>حين تقلق على رزقك — هل قلبك مع الأسباب أم مع الرزاق؟</p>
 <p>حين تخاف من المستقبل — هل قلبك مع الخطة أم مع الوكيل؟</p>
 <p>حين تشعر بالعجز — هل تلجأ إلى نفسك أم إلى الكافي؟</p>
@@ -1375,7 +1206,7 @@ body { font-size: 16px; }
 <p>أفقرك إليه ليُغنيك به. فالفقر إلى الله هو عين الغنى.</p>
 <p>التوكل الحقيقي أن يكون قلبك معلّقًا بالله في كل حالة. في الغنى والفقر. في</p>
 <p>القوة والضعف. في الصحة والمرض. في الأمن والخوف.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>الافتقار إلى الله ليس نقيصة. هو أعظم كنز يملكه القلب.</p>
 <p>لأنك حين تعرف فقرك إلى الله — تفتح يديك إليه. وحين تفتح يديك إليه —</p>
 <p>يعطيك. يعطيك من حيث لا تحتسب. يفتح لك أبوابًا لم تخطر ببالك. يرزقك ما لم</p>
@@ -1399,35 +1230,34 @@ body { font-size: 16px; }
 <p>كافي، أغننا بك عمّن سواك، واجعل فقرنا إليك غنانا الحقيقي. يا حيّ يا قيّوم،</p>
 <p>ثبّت قلوبنا على دينك، واحفظ لنا إيماننا، ولا تزغ قلوبنا بعد إذ</p>
 <p>هديتنا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ ثُمَّ إِذَا مَسَّكُمُ الضُّرُّ فَإِلَيْهِ</p>
 <p class="verse">تَجْأَرُونَ﴾]**</p>
-<p class="reference">(النحل: 53)</p>
+<p class="ref">(النحل: 53)</p>
 <p>أعرف أنك تحمل شيئًا.</p>
 <p>شيئًا لم تُخبر به أحدًا. ذنبًا. تقصيرًا. لحظة ضعف تعود إليك كل</p>
 <p>ليلة.</p>
-<p class="bold-text">هذا الفصل لك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="strong">هذا الفصل لك.</p>
+<div class="sep">✦ ✦ ✦</div>
 
   </div>
 </section>
 
-<section id="ch7" class="chapter">
-  <div class="chapter-header">
+<section id="ch7" class="ch">
+  <div class="chd">
     <h2>الفصل السادس</h2>
-    <div class="chapter-subtitle">الرجوع</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الرجوع</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">**[﴿قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ إِنَّ اللَّهَ</p>
 <p class="verse">يَغْفِرُ الذُّنُوبَ جَمِيعًا إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ﴾]**</p>
-<p class="reference">(الزمر: 53)</p>
-<p class="bold-text">الرجوع</p>
+<p class="ref">(الزمر: 53)</p>
+<p class="strong">الرجوع</p>
 <p>الغَفُور ، الغَفَّار ، التَّوَّاب ، الحَلِيم</p>
 <p>من عرف فقره إلى الله وعجزه عن الاستقامة وحده... لم يبقَ أمامه إلا أن</p>
 <p>يرجع.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>لك أنت الذي أذنبت وتعلم أنك أذنبت. الذي قصّرت وتعرف حجم تقصيرك. الذي</p>
 <p>وقعت في شيء يؤلمك كلما تذكرته. الذي يخاف أحيانًا أن تكون المسافة بينه</p>
 <p>وبين الله قد صارت بعيدة جدًا.</p>
@@ -1445,7 +1275,7 @@ body { font-size: 16px; }
 <p>إن الله يغفر الذنوب جميعًا.</p>
 <p>جميعًا. بلا استثناء. بلا تصنيف. بلا حدّ أعلى. كل الذنوب. كلها. ما دام</p>
 <p>العبد يرجع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الغفور. والمغفرة في أصلها: الستر والوقاية. الغفور يستر ذنبك، ويقيك</p>
 <p>أثره، ويمحو عاره عنك. لا يكتفي بأن يتجاوز — بل يغفر الذنب ويستر</p>
 <p>صاحبه.</p>
@@ -1454,11 +1284,11 @@ body { font-size: 16px; }
 <p>من مغفرتك حتى تملّ أنت من طلبها.</p>
 <p>**[«والذي نفسي بيده لو لم تُذنبوا لذهب الله بكم ولجاء بقومٍ يُذنبون</p>
 <p>فيستغفرون الله فيغفر لهم»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>تأمّل: الله يريدك أن تستغفر. ليس فقط يقبل استغفارك — بل يريده. يحب أن</p>
 <p>يسمعه منك. يحب أن يراك ترجع. يحب أن يغفر لك.</p>
 <p>أيُّ ربٍّ هذا؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو التوّاب. والتوّاب لا يعني فقط أنه يقبل التوبة. بل يعني أنه يتوب على</p>
 <p>العبد — أي يوفّقه للتوبة أصلًا.</p>
 <p>تأمّل في هذا المعنى: أنت حين تتوب — لم تتب بقوتك. الله هو الذي ألهمك</p>
@@ -1466,14 +1296,14 @@ body { font-size: 16px; }
 <p>الذي قبلها منك. تاب عليك — فتبت. ثم تاب عليك — فقبل</p>
 <p>توبتك.</p>
 <p class="verse">﴿ثُمَّ تَابَ عَلَيْهِمْ لِيَتُوبُوا﴾</p>
-<p class="reference">(التوبة: 118)</p>
+<p class="ref">(التوبة: 118)</p>
 <p>تاب عليهم ليتوبوا. لم يقل: تابوا فتاب عليهم. بل تاب عليهم أولًا — أي</p>
 <p>وفّقهم — ثم تابوا. التوبة بدأت من الله قبل أن تبدأ منك. هو الذي فتح لك</p>
 <p>الباب. هو الذي أيقظ في قلبك الرغبة في الرجوع. هو الذي جعلك تشعر بالألم</p>
 <p>من ذنبك.</p>
 <p>فإن كنت الآن تشعر بالندم على ذنب فعلته — فهذا الندم نفسه نعمة من</p>
 <p>التوّاب. لأنه يعني أنه لم يتركك. يعني أنه يريدك أن ترجع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الحليم. والحلم هو الإمهال مع القدرة على المعاجلة.</p>
 <p>الله يراك تذنب — وهو قادر أن يعاقبك فورًا. قادر أن يسلب منك النعمة في</p>
 <p>لحظة الذنب. قادر أن يفضحك أمام الناس. قادر أن يهلكك ولا</p>
@@ -1483,15 +1313,15 @@ body { font-size: 16px; }
 <p>لا يعاجلك بالعقوبة رغم قدرته — لأنه حليم.</p>
 <p class="verse">**[﴿وَلَوْ يُؤَاخِذُ اللَّهُ النَّاسَ بِمَا كَسَبُوا مَا تَرَكَ عَلَىٰ ظَهْرِهَا مِن</p>
 <p class="verse">دَابَّةٍ﴾]**</p>
-<p class="reference">(فاطر: 45)</p>
+<p class="ref">(فاطر: 45)</p>
 <p>لو عاملنا بما نستحق — ما بقي على ظهر الأرض أحد. لكنه حليم. يُمهل ولا</p>
 <p>يُهمل. يؤخّر ولا يُهمل. يمنح الفرصة — ثم الفرصة — ثم</p>
 <p>الفرصة.</p>
 <p>أربعة أسماء: الغفور والغفّار والتوّاب والحليم. كلها تقول لك: ارجع. مهما</p>
 <p>فعلت — ارجع. مهما تأخرت — ارجع. الباب مفتوح. ولم يكن مغلقًا</p>
 <p>يومًا.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>أكثر ما يمنع الإنسان من الرجوع إلى الله ليس الذنب نفسه. بل شعوره بأنه</p>
 <p>لا يستحق أن يرجع.</p>
 <p>والغفور يضعك أمام سؤال صريح: هل تؤمن حقًا أن الله يغفر؟ أم أنك تظن في</p>
@@ -1508,25 +1338,25 @@ body { font-size: 16px; }
 <p>**[«يا ابنَ آدم، إنّك ما دعوتَني ورجوتني غفرتُ لك على ما كان منك ولا أبالي.</p>
 <p>يا ابن آدم، لو بلغت ذنوبُك عَنان السماء ثم استغفرتني غفرتُ لك ولا</p>
 <p>أبالي»]**</p>
-<p class="reference">(رواه الترمذي، وهو حسن لغيره)</p>
+<p class="ref">(رواه الترمذي، وهو حسن لغيره)</p>
 <p>لو بلغت ذنوبك عنان السماء. ليس ذنبًا واحدًا. ليس عشرة. بل ذنوب تملأ ما</p>
 <p>بين الأرض والسماء. ثم استغفرتني — غفرت لك.</p>
 <p>ولا أبالي.</p>
 <p>ولا أبالي. كأن مغفرة كل هذه الذنوب لا تُكلّفه شيئًا. لأنها فعلًا لا تكلّفه</p>
 <p>شيئًا. مغفرته لا تنقص من ملكه ذرة. كرمه لا ينفد. رحمته لا</p>
 <p>تجفّ.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والعجيب أن الله لا يغفر فقط — بل يُبدّل.</p>
 <p class="verse">**[﴿إِلَّا مَن تَابَ وَآمَنَ وَعَمِلَ عَمَلًا صَالِحًا فَأُولَٰئِكَ يُبَدِّلُ اللَّهُ سَيِّئَاتِهِمْ</p>
 <p class="verse">حَسَنَاتٍ﴾]**</p>
-<p class="reference">(الفرقان: 70)</p>
+<p class="ref">(الفرقان: 70)</p>
 <p>يبدّل السيئات حسنات. لا يمحوها فقط — بل يقلبها. الذنب الذي كنت تبكي</p>
 <p>منه يصبح حسنة في ميزانك. لأن الذنب الذي دفعك إلى التوبة والانكسار</p>
 <p>والرجوع — صار سببًا لقربك من الله. وهذا القرب يُكتب لك.</p>
 <p>أيّ كرم هذا؟ تعصيه — فيسترك. ترجع إليه — فيغفر لك. ثم يبدّل ذنبك</p>
 <p>حسنة.</p>
 <p>هل يوجد سبب بعد هذا كله لليأس؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>تأمّل في حياتك:</p>
 <p>كم مرة أذنبت ثم ندمت — لكنك لم ترجع لأنك خجلت من كثرة رجوعك؟ قلت في</p>
 <p>نفسك: أرجع كل مرة ثم أعود — ألا أستحي؟</p>
@@ -1534,11 +1364,11 @@ body { font-size: 16px; }
 <p>مغربها. وكل مرة ترجع فيها — يقبلك كأنها المرة الأولى.</p>
 <p>**[«إنَّ اللهَ يبسطُ يده بالليل ليتوبَ مسيءُ النهار، ويبسط يده بالنهار ليتوبَ</p>
 <p>مسيءُ الليل، حتى تطلع الشمس من مغربها»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>يبسط يده. ليس فقط يفتح الباب — بل يبسط يده. كأنه ينتظرك. كأنه يدعوك.</p>
 <p>كأنه يقول: تعالَ.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الرجوع إلى الله ليس مجرد استغفار باللسان. الرجوع حركة قلب.</p>
 <p>التوبة الحقيقية لها ثلاثة أركان: ندم على ما مضى. وإقلاع عن الذنب في</p>
 <p>الحاضر. وعزم على ألا تعود في المستقبل.</p>
@@ -1548,27 +1378,27 @@ body { font-size: 16px; }
 <p>أن أرجع إليك. ليس عندي مكان آخر أذهب إليه.</p>
 <p class="verse">**[﴿قَالَا رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ</p>
 <p class="verse">الْخَاسِرِينَ﴾]**</p>
-<p class="reference">(الأعراف: 23)</p>
+<p class="ref">(الأعراف: 23)</p>
 <p>هذا دعاء آدم وحواء عليهما السلام. أول توبة في تاريخ البشرية. وانظر إلى</p>
 <p>لغتها: ظلمنا أنفسنا. ليس ظلمنا ربنا. ثم: إن لم تغفر لنا. أي: لا نملك</p>
 <p>المغفرة. ليست بيدنا. هي بيدك أنت يا رب.</p>
 <p>هذا هو الرجوع الحقيقي: فقر كامل بين يدي الله. لا حول لك ولا قوة. لا</p>
 <p>ملجأ ولا منجى إلا إليه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ومن أجمل ما في مقام الرجوع: أن الله يفرح بتوبة عبده.</p>
 <p>**[«للهُ أشدُّ فرحًا بتوبة عبده حين يتوب إليه من أحدكم كان على راحلته بأرض</p>
 <p>فلاة، فانفلتت منه وعليها طعامه وشرابه، فأيِسَ منها، فأتى شجرة فاضطجع في</p>
 <p>ظلّها وقد أيِس من راحلته، فبينما هو كذلك إذا هو بها قائمة عنده، فأخذ</p>
 <p>بخِطامها ثم قال من شدة الفرح: اللهم أنت عبدي وأنا ربك! أخطأ من شدة</p>
 <p>الفرح»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>تأمّل في هذا التشبيه. رجل في صحراء. ضاعت راحلته وعليها كل ما يملك. طعامه</p>
 <p>وشراؤه. يئس من الحياة. استلقى ينتظر الموت. ثم وجدها أمامه فجأة. فرحته</p>
 <p>— هذه الفرحة التي جعلته يخطئ في الكلام من شدتها — الله أشد فرحًا منها</p>
 <p>بتوبتك.</p>
 <p>الله يفرح بعودتك إليه. ليس فقط يقبلها. يفرح بها.</p>
 <p>فكيف تتأخر عن باب من يفرح برجوعك إليه؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ومعنى الحلم يظهر هنا بقوة.</p>
 <p>لأنك لم تُذنب مرة واحدة. أذنبت مرارًا. ورجعت مرارًا. وعدت إلى الذنب مرارًا.</p>
 <p>ومع كل مرة — الله لم يعاجلك. لم يقطع عنك رزقه. لم يسلبك صحتك. لم</p>
@@ -1581,8 +1411,8 @@ body { font-size: 16px; }
 <p>هذا كله حلم الحليم.</p>
 <p>والحليم لا يُمهل ليُهمل. يُمهل ليرجع العبد. فإن رجع — وجد الغفور والتوّاب</p>
 <p>في انتظاره.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>هناك ذنوب تترك في القلب جرحًا عميقًا.</p>
 <p>ذنوب يتوب منها الإنسان — لكنه لا يسامح نفسه عليها. يستغفر الله ويعلم</p>
 <p>في عقله أن الله غفر — لكن قلبه لا يرتاح. يبقى يحمل ثقلها. يتذكرها</p>
@@ -1592,14 +1422,14 @@ body { font-size: 16px; }
 <p>يؤلمه ذنبه — قلب حيّ. قلب يعرف الله ويستحي منه. وهذا القلب هو أحب</p>
 <p>القلوب إلى الله.</p>
 <p class="hadith bold">«كلُّ ابنِ آدم خطّاء، وخيرُ الخطّائين التوّابون»</p>
-<p class="reference">(رواه الترمذي وابن ماجه)</p>
+<p class="ref">(رواه الترمذي وابن ماجه)</p>
 <p>خير الخطائين — ليس من لا يخطئ. بل من يرجع بعد الخطأ. من يقوم بعد</p>
 <p>السقوط. من لا يسمح للذنب أن يقعده عن الطريق.</p>
 <p>لا تدع ذنبك يحبسك عن الله. لأن هذا بالضبط ما يريده الشيطان منك: أن تبقى</p>
 <p>بعيدًا. أن تظن أن الباب أُغلق. أن تيأس.</p>
 <p>الباب لم يُغلق. والله ينتظرك. والتوّاب يحب أن تتوب.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>هل تحمل ذنبًا يؤلمك الآن؟</p>
 <p>هل هناك شيء فعلته — في الماضي القريب أو البعيد — تخجل منه كلما</p>
 <p>تذكرته؟</p>
@@ -1612,7 +1442,7 @@ body { font-size: 16px; }
 <p>ارجع الآن. لا تؤجّل. لا تنتظر أن تصلح نفسك أولًا ثم ترجع. ارجع كما أنت</p>
 <p>— بذنوبك وضعفك وتقصيرك — وهو يتولى الباقي.</p>
 <p>لأنه لم يشترط عليك أن تكون كاملًا لترجع. اشترط فقط أن ترجع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>القلب الذي رجع إلى الله — يبدأ يتذوق شيئًا جديدًا.</p>
 <p>يبدأ يتذوق حلاوة القبول. حلاوة أن يُغفر لك. حلاوة أن يُرفع عنك الثقل.</p>
 <p>حلاوة أن تقوم من سجودك وأنت أخف مما كنت.</p>
@@ -1630,29 +1460,28 @@ body { font-size: 16px; }
 <p>توّاب، تُب علينا توبة لا نرجع بعدها إلى ما يُبعدنا عنك. يا حليم، لا تعاملنا</p>
 <p>بما نستحق، وعاملنا بما أنت أهله. اللهم إنك عفوّ تحب العفو فاعفُ</p>
 <p>عنّا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿وَهُوَ الَّذِي يَقْبَلُ التَّوْبَةَ عَنْ عِبَادِهِ وَيَعْفُو عَنِ السَّيِّئَاتِ وَيَعْلَمُ مَا</p>
 <p class="verse">تَفْعَلُونَ﴾]**</p>
-<p class="reference">(الشورى: 25)</p>
+<p class="ref">(الشورى: 25)</p>
 
   </div>
 </section>
 
-<section id="ch8" class="chapter">
-  <div class="chapter-header">
+<section id="ch8" class="ch">
+  <div class="chd">
     <h2>الفصل السابع</h2>
-    <div class="chapter-subtitle">الرجاء</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الرجاء</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">﴿وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ﴾</p>
-<p class="reference">(الأعراف: 156)</p>
-<p class="bold-text">الرجاء</p>
+<p class="ref">(الأعراف: 156)</p>
+<p class="strong">الرجاء</p>
 <p>الرَّحْمَن ، الرَّحِيم ، البَرّ ، الرَّؤُوف ، الشَّكُور</p>
 <p>من ذاق مغفرة الله... بدأ يرجو رحمته. ومن رجا رحمته... أحبّ السير</p>
 <p>إليه.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>هل سبق أن خرجت من صلاتك وأنت تشعر أنك أثقل مما دخلت؟</p>
 <p>يمنعك من المعصية — نعم. لكنه لا يجعلك تحب المشي إليه. لا يجعلك تشتاق</p>
 <p>إلى الصلاة. لا يجعلك تفرح بذكره. الخوف يوقفك عن الخطأ — لكن الرجاء هو</p>
@@ -1668,9 +1497,9 @@ body { font-size: 16px; }
 <p>وسعت كل شيء. ليس بعض الأشياء. كل شيء. وسعت السماوات والأرض. وسعت المطيع</p>
 <p>والعاصي. وسعت القريب والبعيد. وسعت من يستحقها ومن لا يستحقها. رحمة لا</p>
 <p>حدود لها. لا سقف لها. لا ضفاف لها.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وأول اسم تقرؤه في القرآن بعد اسم الله:</p>
-<p class="bold-text">الرحمن الرحيم.</p>
+<p class="strong">الرحمن الرحيم.</p>
 <p>اسمان من الرحمة. كأن الله أراد أن يقول لك قبل أن تقرأ أي شيء آخر: أنا</p>
 <p>رحيم. قبل أن تعرف أوامري ونواهي. قبل أن تعرف وعدي ووعيدي. قبل كل شيء —</p>
 <p>اعلم أنني رحمن رحيم.</p>
@@ -1681,23 +1510,23 @@ body { font-size: 16px; }
 <p>الرحيم — رحمة خاصة بمن أقبل عليه. رحمة المؤمن. رحمة التائب. رحمة من</p>
 <p>يسير إلى الله. رحمة يختص بها من يستحقها بإيمانه وإقباله.</p>
 <p class="verse">﴿وَكَانَ بِالْمُؤْمِنِينَ رَحِيمًا﴾</p>
-<p class="reference">(الأحزاب: 43)</p>
+<p class="ref">(الأحزاب: 43)</p>
 <p>الرحمن رحمة عامة. والرحيم رحمة خاصة. وأنت — إن كنت مؤمنًا سائرًا إلى</p>
 <p>الله — فأنت في الرحمتين معًا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ولتعلم كم هي واسعة هذه الرحمة:</p>
 <p>**[«إنَّ الله خلق الرحمة يوم خلقها مائةَ رحمة، فأمسك عنده تسعًا وتسعين رحمة،</p>
 <p>وأرسل في خلقه كلِّهم رحمةً واحدة. فلو يعلم الكافر بكلِّ الذي عند الله من</p>
 <p>الرحمة لم ييأس من الجنة، ولو يعلم المؤمن بكلِّ الذي عند الله من العذاب لم</p>
 <p>يأمن من النار»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>كل رحمة تراها في الدنيا — أمّ تحنو على طفلها، وصديق يقف بجانب صديقه،</p>
 <p>ومريض يُشفى، ومكروب يُفرّج عنه، وحيوان يُطعم صغاره — كل هذه الرحمة التي</p>
 <p>تملأ الأرض منذ خُلقت إلى أن تفنى — جزء من رحمة واحدة.</p>
 <p>والتسع والتسعون الباقية — عند الله ليوم القيامة.</p>
 <p>ما الذي يبقى من اليأس بعد هذا الحديث؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>الرحمة ليست شيئًا بعيدًا تنتظره يوم القيامة. الرحمة تحيط بك الآن. في كل</p>
 <p>لحظة من لحظات حياتك.</p>
 <p>أنت تعيش في رحمة الله — حتى لو لم تنتبه.</p>
@@ -1711,46 +1540,46 @@ body { font-size: 16px; }
 <p>**[«عجبًا لأمر المؤمن، إنَّ أمره كلَّه خير، وليس ذاك لأحدٍ إلا للمؤمن. إن</p>
 <p>أصابته سرّاء شكر فكان خيرًا له، وإن أصابته ضرّاء صبر فكان خيرًا</p>
 <p>له»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>أمره كله خير. كله. السرّاء والضرّاء. الفرح والحزن. العطاء والمنع. كله يصب</p>
 <p>في مصلحتك — لأن الذي يدبّره رحمن رحيم.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو البَرّ. والبرّ هو الذي يبرّ عباده ويُحسن إليهم إحسانًا بعد إحسان. برّه</p>
 <p>أوسع من برّ كل والد بولده. لأن برّ المخلوق ينقطع وبرّ الله لا</p>
 <p>ينقطع.</p>
 <p class="verse">﴿إِنَّهُ هُوَ الْبَرُّ الرَّحِيمُ﴾</p>
-<p class="reference">(الطور: 28)</p>
+<p class="ref">(الطور: 28)</p>
 <p>تأمّل في هذا: كم نعمة أعطاك الله دون أن تسأله إياها؟ كم خير ساقه إليك</p>
 <p>دون أن تتوقعه؟ كم باب فتحه لك دون أن تطرقه؟ هذا هو البرّ. عطاء مستمر لا</p>
 <p>يتوقف — حتى لو لم تسأل.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الرؤوف. والرأفة أرقّ من الرحمة. الرحمة قد تكون في الشدة: المرض الذي</p>
 <p>يُكفّر الذنوب رحمة وإن كان مؤلمًا. لكن الرأفة لطف خالص. رفق خالص. حنان</p>
 <p>خالص.</p>
 <p class="verse">﴿إِنَّ اللَّهَ بِالنَّاسِ لَرَءُوفٌ رَّحِيمٌ﴾</p>
-<p class="reference">(البقرة: 143)</p>
+<p class="ref">(البقرة: 143)</p>
 <p>الرؤوف هو الذي يرفق بك في بلائك. يخفف عنك ما لا تطيق. لا يكلّفك فوق</p>
 <p>وسعك. لا يبتليك بما لا تحتمل. وإن اشتد عليك البلاء — يجعل فيه منافذ</p>
 <p>للرحمة لا تراها إلا بعد حين.</p>
 <p class="verse">﴿لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا﴾</p>
-<p class="reference">(البقرة: 286)</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="ref">(البقرة: 286)</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الشكور. والشكور اسم عجيب — لأنه يعني أن الله يشكر</p>
 <p>عبده.</p>
 <p>نعم. الله — الغني عنك وعن عبادتك — يشكرك على طاعتك. تفعل القليل</p>
 <p>فيعطيك الكثير. تعمل عملًا صغيرًا فيضاعفه أضعافًا. تتصدق بتمرة فيربّيها لك</p>
 <p>حتى تصير كالجبل يوم القيامة.</p>
 <p class="verse">﴿إِنَّهُ كَانَ شَاكِرًا عَلِيمًا﴾</p>
-<p class="reference">(الإسراء: 19)</p>
+<p class="ref">(الإسراء: 19)</p>
 <p>**[«من تصدَّقَ بعدلِ تمرةٍ من كسبٍ طيِّبٍ — ولا يقبلُ اللهُ إلا الطيِّبَ — فإنَّ</p>
 <p>اللهَ يتقبَّلُها بيمينه ثم يُربِّيها لصاحبها كما يُربِّي أحدُكم فَلُوَّهُ حتى تكون مثلَ</p>
 <p>الجبل»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>تمرة واحدة — تصبح كالجبل. هذا هو شكر الشكور. يعاملك بأضعاف ما تستحق.</p>
 <p>لا يُضيع لك شيئًا. لا ينسى لك شيئًا. حتى الابتسامة في وجه أخيك — يكتبها</p>
 <p>لك.</p>
 <p class="hadith bold">«لا تحقِرنّ من المعروف شيئًا ولو أن تلقى أخاك بوجهٍ طَلقٍ»</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>وهو الواسع. واسع الرحمة. واسع المغفرة. واسع العطاء. لا تظن أن رحمته</p>
 <p>تضيق عنك. مهما بلغ ذنبك — رحمته أوسع. مهما اشتد ألمك — لطفه أوسع.</p>
 <p>مهما ضاقت بك الدنيا — فضله أوسع.</p>
@@ -1760,8 +1589,8 @@ body { font-size: 16px; }
 <p>سبعة أسماء: الرحمن والرحيم والبرّ والرؤوف والشكور والواسع والحميد. كلها</p>
 <p>تقول لك: ربك أرحم بك مما تتصور. وأكرم معك مما تستحق. وأوسع فضلًا مما</p>
 <p>تتخيل.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الرجاء هو أن ينتظر القلب رحمة الله ويثق فيها.</p>
 <p>ليس تمنيًا فارغًا. ليس كسلًا عن العمل وتعلّقًا بالأمنيات. الرجاء الحقيقي</p>
 <p>حالة قلبية تجمع بين ثلاثة أشياء: محبة الله، والعمل بطاعته، وانتظار</p>
@@ -1770,10 +1599,10 @@ body { font-size: 16px; }
 <p>من أحب وعمل ورجا — هذا هو العبد الذي وصفه الله:</p>
 <p class="verse">**[﴿أُولَٰئِكَ الَّذِينَ يَدْعُونَ يَبْتَغُونَ إِلَىٰ رَبِّهِمُ الْوَسِيلَةَ أَيُّهُمْ أَقْرَبُ وَيَرْجُونَ رَحْمَتَهُ</p>
 <p class="verse">وَيَخَافُونَ عَذَابَهُ﴾]**</p>
-<p class="reference">(الإسراء: 57)</p>
+<p class="ref">(الإسراء: 57)</p>
 <p>يرجون رحمته ويخافون عذابه. الرجاء والخوف معًا. كجناحي طائر — لا يطير</p>
 <p>إلا بهما.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والرجاء يصنع في القلب ما لا يصنعه الخوف.</p>
 <p>الخوف يمنعك من الحرام. لكن الرجاء يدفعك إلى الطاعة بشوق. الخوف يجعلك</p>
 <p>تقف عند الحدود. لكن الرجاء يجعلك تجري إلى الله. الخوف حارس. والرجاء</p>
@@ -1791,7 +1620,7 @@ body { font-size: 16px; }
 <p>الطريق يقود إلى رحمة الله.</p>
 <p>الرجاء يحوّل العبادة من واجب ثقيل إلى شوق. ومن تكليف إلى تشريف. ومن خوف</p>
 <p>إلى حب.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وللرجاء أثر عميق على حياتك اليومية — ليس فقط على عبادتك.</p>
 <p>حين تمرض — الرجاء يقول لك: الرحمن لن يضيّعك. حين تفقد شيئًا تحبه —</p>
 <p>الرجاء يقول لك: البرّ سيعوّضك. حين تفشل — الرجاء يقول لك: الشكور لن يُضيع</p>
@@ -1806,15 +1635,15 @@ body { font-size: 16px; }
 <p>هذه الحلاوة هي التي تجعل الراجي يعيش حياة مختلفة. ليست حياة بلا ألم —</p>
 <p>بل حياة فيها ألم ومعه أمل. وفيها ضعف ومعه ثقة. وفيها خوف ومعه سكينة. لأن</p>
 <p>الذي يرجوه — أهل لأن يُرجى.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>هناك فرق بين الرجاء والأمن من مكر الله.</p>
 <p>الرجاء: أن ترجو رحمة الله وأنت تعمل لها. تُحسن وتطيع وترجو أن يقبل منك.</p>
 <p>تُذنب وتتوب وترجو أن يغفر لك. الرجاء لا يفارق العمل.</p>
 <p>الأمن: أن تتمادى في المعصية وتقول: الله غفور رحيم. أن تُسرف على نفسك ولا</p>
 <p>تتوب وتظن أنك بخير. هذا ليس رجاءً — هذا غرور.</p>
 <p class="verse">﴿أَفَأَمِنُوا مَكْرَ اللَّهِ فَلَا يَأْمَنُ مَكْرَ اللَّهِ إِلَّا الْقَوْمُ الْخَاسِرُونَ﴾</p>
-<p class="reference">(الأعراف: 99)</p>
+<p class="ref">(الأعراف: 99)</p>
 <p>الراجي يعمل ويرجو. الآمِن لا يعمل ويتمنى. الراجي يخاف تقصيره مع رجائه.</p>
 <p>الآمِن لا يخاف شيئًا. الراجي بين يدي الله دائمًا. الآمِن نسي أنه بين يدي</p>
 <p>الله.</p>
@@ -1831,17 +1660,17 @@ body { font-size: 16px; }
 <p>بابًا لم يكن مفتوحًا من قبل: باب الشوق.</p>
 <p>الشوق إلى رحمته. الشوق إلى رضاه. الشوق إلى لقائه. والقلب الذي بدأ يشتاق</p>
 <p>إلى الله — لن يهدأ حتى يصل.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>ما الذي تظنه بالله الآن؟</p>
 <p>هل تظن أنه ينتظرك ليعاقبك؟ أم تظن أنه ينتظرك ليرحمك؟</p>
 <p class="hadith bold">«أنا عند ظنِّ عبدي بي، فليظنَّ بي ما شاء»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>الله عند ظنك به. إن ظننت أنه سيرحمك — رحمك. إن ظننت أنه سيغفر لك —</p>
 <p>غفر لك. إن ظننت أنه قريب — وجدته قريبًا.</p>
 <p>فأحسن الظن بالله. ليس لأنك تستحق رحمته — بل لأنه أهل لها. الرحمة</p>
 <p>صفته. والمغفرة شأنه. والكرم طبعه — سبحانه وتعالى.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>لعلك الآن بدأت تشعر بشيء لم تشعر به من قبل.</p>
 <p>بدأت تشعر أن الله ليس فقط إلهًا تخافه. بل إله ترجوه. ترجو رحمته. ترجو</p>
 <p>قربه. ترجو أن يكون راضيًا عنك.</p>
@@ -1860,42 +1689,41 @@ body { font-size: 16px; }
 <p>كما أحسنت من قبل، ولا تكلنا إلى أنفسنا طرفة عين. يا شكور، يا من يعطي على</p>
 <p>القليل الكثير — لا تُضع لنا عملًا مهما صغُر، وتقبّل منّا أحسن ما عملنا</p>
 <p>وتجاوز عن سيئاتنا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">﴿نَبِّئْ عِبَادِي أَنِّي أَنَا الْغَفُورُ الرَّحِيمُ﴾</p>
-<p class="reference">(الحجر: 49)</p>
+<p class="ref">(الحجر: 49)</p>
 
   </div>
 </section>
 
-<section id="ch9" class="chapter">
-  <div class="chapter-header">
+<section id="ch9" class="ch">
+  <div class="chd">
     <h2>الفصل الثامن</h2>
-    <div class="chapter-subtitle">المحبة والقرب</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">المحبة والقرب</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p>توقّف.</p>
 <p>كل ما قرأته حتى الآن كان يقودك إلى هنا.</p>
 <p>عرفت الله فعظّمته. ثم استيقظت. ثم انتبهت أنه يراك. ثم استحييت من كرمه.</p>
 <p>ثم عرفت فقرك. ثم رجعت تائبًا. ثم رجوت رحمته.</p>
 <p>والآن أسألك سؤالًا لم يسألك إياه هذا الكتاب من قبل:</p>
-<p class="bold-text">هل تحب الله؟</p>
+<p class="strong">هل تحب الله؟</p>
 <p>ليس: هل تخافه. ليس: هل ترجوه. ليس: هل تطيعه.</p>
 <p>هل تحبه؟</p>
 <p>محبة حقيقية. يشتاق فيها القلب. يفرح فيها بذكره. يتألم فيها ببعده. يأنس</p>
 <p>فيها بمناجاته.</p>
 <p>إن كنت لا تعرف الإجابة — فهذا الفصل لك. اقرأه وأنت تسمح لقلبك أن يشعر</p>
 <p>— لا أن يفهم فقط.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿قُلْ إِن كُنتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ وَيَغْفِرْ لَكُمْ</p>
 <p class="verse">ذُنُوبَكُمْ﴾]**</p>
-<p class="reference">(آل عمران: 31)</p>
-<p class="bold-text">المحبة والقرب</p>
+<p class="ref">(آل عمران: 31)</p>
+<p class="strong">المحبة والقرب</p>
 <p>الوَدُود ، القَرِيب ، المُجِيب ، الوَلِيّ</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>وأول اسم يفتح هذا الباب:</p>
-<p class="bold-text">الودود.</p>
+<p class="strong">الودود.</p>
 <p>الله ودود.</p>
 <p>تأمّل في هذا الاسم. الودّ أرقّ من الحب. الحب قد يكون في القلب ولا يظهر.</p>
 <p>لكن الودّ حب يظهر في المعاملة. حب يتحول إلى أفعال. الودود هو الذي يُحبك</p>
@@ -1912,12 +1740,12 @@ body { font-size: 16px; }
 <p>لا يعفو بإعراض. يغفر — ويودّ.</p>
 <p>أيّ ربٍّ هذا الذي تعصيه فيسترك، ثم ترجع إليه فيغفر لك، ثم يحبك بعد كل</p>
 <p>ذلك؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو القريب. والقرب هنا ليس قرب مسافة — بل قرب معيّة ورعاية</p>
 <p>وإجابة.</p>
 <p class="verse">**[﴿وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا</p>
 <p class="verse">دَعَانِ﴾]**</p>
-<p class="reference">(البقرة: 186)</p>
+<p class="ref">(البقرة: 186)</p>
 <p>تأمّل: لم يقل «فقل إني قريب». قال: «فإني قريب». حذف الواسطة. كأن الجواب</p>
 <p>يأتي من الله مباشرة — بلا واسطة حتى في اللفظ. لم يقل لنبيه: أخبرهم.</p>
 <p>قال: أنا قريب.</p>
@@ -1926,25 +1754,25 @@ body { font-size: 16px; }
 <p>قريب من الذي يدعوه في جوف الليل ولا يسمعه أحد. قريب من الذي يبكي في</p>
 <p>سجوده ولا يراه أحد. قريب من الذي يحمل همًّا لم يُخبر به أحدًا. قريب ممن</p>
 <p>أغلقت عليه الدنيا أبوابها فلم يجد إلا الله.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المجيب. والإجابة تأتي بعد القرب — لأن القريب يسمع</p>
 <p>فيجيب.</p>
 <p>لكن إجابة الله ليست دائمًا بالشكل الذي تتوقعه.</p>
 <p>**[«ما من مسلم يدعو بدعوة ليس فيها إثم ولا قطيعة رحم إلا أعطاه الله بها</p>
 <p>إحدى ثلاث: إما أن تُعجَّل له دعوته، وإما أن يُدَّخَرها له في الآخرة، وإما أن</p>
 <p>يُصرَف عنه من السوء مثلُها»]**</p>
-<p class="reference">(رواه أحمد)</p>
+<p class="ref">(رواه أحمد)</p>
 <p>ثلاث إجابات — كلها خير. إما أن يعطيك ما سألت. أو يدّخر لك خيرًا منه</p>
 <p>ليوم أنت أحوج فيه. أو يدفع عنك شرًّا لا تعلمه. في كل الأحوال — دعاؤك</p>
 <p>مسموع. في كل الأحوال — أنت مُجاب.</p>
 <p>من عرف هذا — لم ييأس من الدعاء أبدًا. ولم يظن أن دعاءه ضاع. كل دعوة</p>
 <p>لها مكان عند الله — حتى لو لم ترَ أثرها الآن.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الولي. والولي هو القريب الذي يتولى أمرك. يتولى نصرتك. يتولى حفظك.</p>
 <p>يتولى رعايتك. ليس وليًّا بعيدًا — بل وليّ حاضر يتدخل في حياتك</p>
 <p>ويدبّرها.</p>
 <p class="verse">﴿اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ﴾</p>
-<p class="reference">(البقرة: 257)</p>
+<p class="ref">(البقرة: 257)</p>
 <p>يُخرجهم من الظلمات إلى النور. من ظلمة الجهل إلى نور العلم. من ظلمة الذنب</p>
 <p>إلى نور التوبة. من ظلمة القلق إلى نور الطمأنينة. من ظلمة الوحدة إلى نور</p>
 <p>القرب منه.</p>
@@ -1962,8 +1790,8 @@ body { font-size: 16px; }
 <p>سبعة أسماء: الودود والقريب والمجيب والولي والهادي والرشيد والوالي. كلها</p>
 <p>تقول لك: الله يحبك. ويقترب منك. ويسمعك. ويتولاك. ويهديك. ويُرشدك. ويدبّر</p>
 <p>أمرك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>كثير من الناس يعبدون الله وهم يشعرون أنه بعيد.</p>
 <p>يصلون ويشعرون أن صلاتهم لا تصل. يدعون ويشعرون أن دعاءهم لا يُسمع. يذكرون</p>
 <p>الله ويشعرون أن قلوبهم جافة.</p>
@@ -1975,11 +1803,11 @@ body { font-size: 16px; }
 <p>ابتعدت بذنوبك. أو بغفلتك. أو بانشغالك بالدنيا. أو بتعلقك</p>
 <p>بغيره.</p>
 <p class="hadith bold">«من تقرَّبَ إليَّ شبرًا تقرَّبتُ إليه ذراعًا»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>الله يتقرب إليك أكثر مما تتقرب إليه. لكن الخطوة الأولى منك. شبر واحد</p>
 <p>منك — وذراع منه. حركة صغيرة من قلبك — ويأتيك بما لا تتوقع من</p>
 <p>القرب.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والمحبة لله لا تحتاج إلى مقامات خارقة. لا تحتاج أن تكون عالمًا أو عابدًا</p>
 <p>عظيمًا. المحبة تبدأ من أشياء بسيطة جدًا:</p>
 <p>أن تفرح بالصلاة — لأنك ستقف بين يدي من تحب. أن تشتاق إلى القرآن —</p>
@@ -1988,20 +1816,20 @@ body { font-size: 16px; }
 <p>المحب لا يُكره على الطاعة. بل يبحث عنها. يبحث عن أي شيء يقربه من الله.</p>
 <p>صلاة ليل. صدقة سر. ذكر في خلوة. دعوة صادقة. دمعة في سجود. كلها أبواب قرب</p>
 <p>— والمحب لا يدع بابًا إلا طرقه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وقد جاء في الحديث القدسي:</p>
 <p>**[«ولا يزال عبدي يتقرب إليّ بالنوافل حتى أحبّه، فإذا أحببته كنت سمعه الذي</p>
 <p>يسمع به وبصره الذي يبصر به ويده التي يبطش بها ورجله التي يمشي بها، وإن</p>
 <p>سألني لأعطينّه ولئن استعاذني لأعيذنّه»]**</p>
-<p class="reference">(رواه البخاري)</p>
+<p class="ref">(رواه البخاري)</p>
 <p>حتى أحبه. هذا هو الهدف. أن يحبك الله.</p>
 <p>وإذا أحبك الله — تغيّر كل شيء. سمعك يتغير: تسمع الحق فتتبعه. بصرك</p>
 <p>يتغير: ترى الآيات فتتعظ. يدك تتغير: لا تمتد إلا لخير. رجلك تتغير: لا</p>
 <p>تمشي إلا إلى خير. حياتك كلها تُضاء بنور محبة الله لك.</p>
 <p>وإن سألته — أعطاك. وإن استعذت به — أعاذك. لأنك لست مجرد عبد يطيع</p>
 <p>— بل حبيب يُكرم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>محبة الله ليست شعورًا غامضًا لا تعرف كيف تحققه. لها علامات</p>
 <p>واضحة.</p>
 <p>قال ابن القيم: «علامة المحبة لله: أن يكون ذكره أحب إليك من كل شيء. وأن</p>
@@ -2014,7 +1842,7 @@ body { font-size: 16px; }
 <p>هل تأنس بالقرآن؟ أم تقرؤه كواجب؟</p>
 <p>هل تجد راحتك في الدعاء؟ أم تدعو فقط حين تحتاج؟</p>
 <p>هذه أسئلة صادقة. والإجابة عنها تُريك أين أنت من محبة الله.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والمحبة ليست مقامًا واحدًا ثابتًا. هي درجات. والقلب يصعد فيها بقدر ما</p>
 <p>يقترب.</p>
 <p>أدنى درجات المحبة: أن تحب الله لأنه ينعم عليك. تحبه لرزقه وعافيته</p>
@@ -2026,11 +1854,11 @@ body { font-size: 16px; }
 <p>المحبة التي قال فيها النبي ﷺ:</p>
 <p>**[«لا يؤمن أحدكم حتى أكون أحبَّ إليه من ولده ووالده والناس</p>
 <p>أجمعين»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>فإن كان حب النبي ﷺ شرطًا في الإيمان — فكيف بحب الله الذي أرسل النبي</p>
 <p>ﷺ؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>من أجمل ثمرات المحبة: الأنس بالله.</p>
 <p>الأنس هو أن يكون قربك من الله مصدر سعادتك. أن تجد في ذكره ما لا تجده في</p>
 <p>صحبة أحد. أن تكون خلوتك معه أحبّ إليك من جلوتك مع الناس. أن تشعر أنك لست</p>
@@ -2040,7 +1868,7 @@ body { font-size: 16px; }
 <p>تذوقه في هذه الحياة.</p>
 <p>من ذاق هذا الأنس — عرف لماذا كان النبي ﷺ يقول:</p>
 <p class="hadith bold">«أرحنا بها يا بلال»</p>
-<p class="reference">(رواه أبو داود)</p>
+<p class="ref">(رواه أبو داود)</p>
 <p>أرحنا بالصلاة. لم يقل: أرحنا منها. بل بها. الصلاة كانت راحته ﷺ. لأن</p>
 <p>الصلاة لقاء بالمحبوب. والمحب لا يستريح إلا حين يلقى من يحب.</p>
 <p>والأنس يُولّد الشوق. شوق إلى لقاء الله. شوق إلى الصلاة لأنها وقوف بين</p>
@@ -2056,7 +1884,7 @@ body { font-size: 16px; }
 <p>الله بصدق. كل من أكثر من ذكر الله وأحسن صلاته وأطال سجوده وتضرع في دعائه</p>
 <p>— سيجد من هذا الأنس نصيبًا. قد يكون قليلًا في البداية — لكنه يكبر كلما</p>
 <p>اقتربت.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وقد تجد في حياتك إشارات إلى هذا القرب لا تنتبه لها:</p>
 <p>دمعة تنزل فجأة وأنت تقرأ القرآن. شعور بالسكينة يملأ صدرك وأنت في</p>
 <p>السجود. فرحة غامرة بعد صدقة لم يعلم بها أحد. طمأنينة تنزل على قلبك وأنت</p>
@@ -2064,8 +1892,8 @@ body { font-size: 16px; }
 <p>هذه كلها لمسات من الودود. إشارات من القريب. يُريك أنه هنا. أنه يسمعك.</p>
 <p>أنه يحبك.</p>
 <p>لا تتجاهل هذه اللحظات. هي من أعظم نعم الله عليك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>ما الذي يمنعك الآن من أن تحب الله أكثر؟</p>
 <p>هل هو انشغالك بالدنيا؟ هل هو شعورك بالبعد؟ هل هو ذنب يقف بينك وبينه؟ هل</p>
 <p>هو أنك لم تعرفه بما يكفي لتحبه؟</p>
@@ -2074,7 +1902,7 @@ body { font-size: 16px; }
 <p>واحدة بانكسار. وسترى ما لم تكن تتوقع.</p>
 <p>لأن الودود لا يُخيّب من أقبل عليه. والقريب لا يُبعد من اقترب منه. والمجيب</p>
 <p>لا يرد من سأله. والولي لا يترك من تولاه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وحين يمتلئ القلب بمحبة الله وقربه — يبدأ يشعر بشيء جديد.</p>
 <p>يبدأ يشعر بعظمة من يحب. ليست عظمة تُبعد — بل عظمة تُخشع. وكلما عظم الحب</p>
 <p>— عظم التعظيم.</p>
@@ -2088,31 +1916,30 @@ body { font-size: 16px; }
 <p>— قرّبنا منك قربًا لا نبتعد بعده أبدًا. يا مجيب، يا من يسمع دعاء المضطر</p>
 <p>ونجوى المنكسر — لا تردّنا خائبين. يا وليّ، يا من تولّى أمرنا ونحن لا ندري</p>
 <p>— تولّنا فيمن توليت، ولا تكلنا إلى غيرك طرفة عين.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">﴿أَلَا إِنَّ أَوْلِيَاءَ اللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ﴾</p>
-<p class="reference">(يونس: 62)</p>
+<p class="ref">(يونس: 62)</p>
 
   </div>
 </section>
 
-<section id="ch10" class="chapter">
-  <div class="chapter-header">
+<section id="ch10" class="ch">
+  <div class="chd">
     <h2>الفصل التاسع</h2>
-    <div class="chapter-subtitle">التعظيم والخشية</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">التعظيم والخشية</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">**[﴿وَمَا قَدَرُوا اللَّهَ حَقَّ قَدْرِهِ وَالْأَرْضُ جَمِيعًا قَبْضَتُهُ يَوْمَ الْقِيَامَةِ وَالسَّمَاوَاتُ</p>
 <p class="verse">مَطْوِيَّاتٌ بِيَمِينِهِ﴾]**</p>
-<p class="reference">(الزمر: 67)</p>
-<p class="bold-text">التعظيم والخشية</p>
+<p class="ref">(الزمر: 67)</p>
+<p class="strong">التعظيم والخشية</p>
 <p>العَظِيم ، الجَلِيل ، الكَبِير ، المَلِك ، العَزِيز ، القَهَّار ، الجَبَّار ،</p>
 <p>المُتَكَبِّر</p>
 <p>من أحب الله... هابه. لأن المحب يعرف عظمة من يحب.</p>
 <p>التعظيم ليس كلمة تقولها بلسانك حين تقول «الله أكبر». التعظيم أن يكون</p>
 <p>الله أكبر فعلًا في قلبك — من كل شيء.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>في الفصل الماضي أحببت الله. عرفت ودّه وقربه. عرفت أنه يتودّد إليك ويسمعك</p>
 <p>ويتولاك.</p>
 <p>لكن الحب وحده — بلا تعظيم — ناقص.</p>
@@ -2121,46 +1948,46 @@ body { font-size: 16px; }
 <p>والمحبة بلا تعظيم تتحول إلى استرخاء. يُحبّ العبد ربه فيأمن. يأمن فيتراخى.</p>
 <p>يتراخى فيتجرأ. والتعظيم هو الذي يمنع هذا كله — يجعل المحبة مقترنة</p>
 <p>بالهيبة، والقرب مقترنًا بالأدب.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وما قدروا الله حق قدره.</p>
 <p>هذه الآية تهزّ القلب. ما قدروه حق قدره. لم يعرفوا عظمته. لم يتصوروا</p>
 <p>جلاله. تعاملوا معه كأنه مخلوق من المخلوقات.</p>
 <p>ثم تأتي الصورة:</p>
 <p class="verse">**[﴿وَالْأَرْضُ جَمِيعًا قَبْضَتُهُ يَوْمَ الْقِيَامَةِ وَالسَّمَاوَاتُ مَطْوِيَّاتٌ بِيَمِينِهِ سُبْحَانَهُ وَتَعَالَىٰ</p>
 <p class="verse">عَمَّا يُشْرِكُونَ﴾]**</p>
-<p class="reference">(الزمر: 67)</p>
+<p class="ref">(الزمر: 67)</p>
 <p>الأرض كلها — بجبالها وبحارها وقاراتها وكل من عليها — في قبضته يوم</p>
 <p>القيامة. والسماوات — السبع — مطويات بيمينه. كما تطوي أنت</p>
 <p>ورقة.</p>
 <p>تأمّل في هذا الحجم. لا — لا تتأمل. لأنك لا تستطيع. العقل البشري لا</p>
 <p>يستوعب هذه العظمة. نحن نعجز عن تصوّر حجم الأرض التي نعيش عليها. فكيف</p>
 <p>بالسماوات السبع؟ فكيف بمن يقبضها كلها بيمينه؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو العظيم. والعظمة صفة لا يشاركه فيها أحد. كل عظمة في المخلوقات —</p>
 <p>جبل شاهق، بحر عميق، سماء واسعة — كلها علامات على عظمة خالقها. لكنها لا</p>
 <p>تساوي شيئًا أمام عظمته.</p>
 <p>وهو الجليل. والجلال هو العظمة المقترنة بالكمال. ليس ضخامة مجردة — بل</p>
 <p>عظمة فيها كمال وجمال وهيبة.</p>
 <p class="verse">﴿تَبَارَكَ اسْمُ رَبِّكَ ذِي الْجَلَالِ وَالْإِكْرَامِ﴾</p>
-<p class="reference">(الرحمن: 78)</p>
+<p class="ref">(الرحمن: 78)</p>
 <p>ذي الجلال والإكرام. جلال وإكرام معًا. عظمة ترهب — وكرم يُدني. هيبة تُخشع</p>
 <p>— ولطف يُطمئن. هذا هو الله: لا يُعرف إلا بهذا الجمع.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الكبير. الأكبر من كل شيء. الله أكبر — الكلمة التي تفتتح بها كل</p>
 <p>صلاة. أكبر من همّك. أكبر من خوفك. أكبر من عدوّك. أكبر من مرضك. أكبر من كل</p>
 <p>ما يشغل قلبك.</p>
 <p>لكن كم مرة قلت «الله أكبر» وقلبك لا يشعر بمعناها؟</p>
 <p>لو شعر القلب بمعنى «الله أكبر» حقًا — لما خاف من مخلوق. ولما تعلّق</p>
 <p>بسبب. ولما انهزم أمام شهوة. ولما استسلم لقلق.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الملك. وليس كملوك الأرض. ملوك الأرض يملكون أرضًا محدودة وشعبًا محدودًا</p>
 <p>ووقتًا محدودًا ثم يزولون. أما الله فهو ملك السماوات والأرض وما بينهما.</p>
 <p>ملكه لا ينازعه أحد. ولا ينتهي. ولا ينتقل.</p>
 <p class="verse">﴿لِّمَنِ الْمُلْكُ الْيَوْمَ لِلَّهِ الْوَاحِدِ الْقَهَّارِ﴾</p>
-<p class="reference">(غافر: 16)</p>
+<p class="ref">(غافر: 16)</p>
 <p>يوم القيامة يسأل هذا السؤال — ولا يجيب أحد. لأن كل ملك زال. كل قوة</p>
 <p>انهارت. كل جبّار خضع. لم يبقَ ملك إلا الملك الحق.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو العزيز. والعزة هي الغلبة والامتناع. لا يُغلب ولا يُمنع. لا يُقهر ولا</p>
 <p>يُعجز. كل شيء يخضع لعزته — شاء أم أبى.</p>
 <p>وهو القهّار. والقهر أن يُخضع كل شيء لسلطانه. قهر الجبابرة فأذلّهم. قهر</p>
@@ -2168,7 +1995,7 @@ body { font-size: 16px; }
 <p>شيء.</p>
 <p>وكل من تراه في الدنيا يتكبّر — سيقف يومًا أمام القهّار ذليلًا. كل ظالم.</p>
 <p>كل جبّار. كل متكبّر. كلهم سيخضعون — طوعًا أو كرهًا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الجبّار. وللجبّار ثلاثة معانٍ كلها عظيمة:</p>
 <p>**الأول:** الذي يقهر كل شيء ويُخضعه لأمره.</p>
 <p>**الثاني:** الذي يجبر كل كسر. يجبر المنكسر. يجبر القلب المكسور. يجبر</p>
@@ -2180,13 +2007,13 @@ body { font-size: 16px; }
 <p>قال عمر بن عبد العزيز رحمه الله: «إذا سمعت كلمة من مسلم فاحملها على</p>
 <p>أحسن ما تجد، حتى لا تجد لها محملًا.» فكيف بربّ المسلمين — الجبّار الذي</p>
 <p>يجبر ولا يكسر؟</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المتكبّر. والكبرياء لا تليق إلا بالله. في المخلوقين ذمّ — وفي الله</p>
 <p>مدح. لأن المخلوق يتكبّر بما ليس فيه. والله يتكبّر بما هو أهله. الكبرياء</p>
 <p>رداؤه والعظمة إزاره — ومن نازعه واحدة منهما أهلكه.</p>
 <p>**[«العظمةُ إزاري والكبرياءُ ردائي، فمن نازعني واحدًا منهما قذفتُه في</p>
 <p>النار»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>وهو العليّ المتعالي. العالي فوق كل شيء بذاته وصفاته وقهره. فوق كل مخلوق.</p>
 <p>فوق كل سلطان. فوق كل تصوّر. لا شيء يعلو عليه ولا يدنو من مكانته.</p>
 <p>والمتعالي عن كل نقص وكل عيب — سبحانه.</p>
@@ -2202,20 +2029,20 @@ body { font-size: 16px; }
 <p>وهو البديع. الذي أبدع الخلق على غير مثال سابق. كل شيء في هذا الكون —</p>
 <p>بديع. لأن صانعه بديع سبحانه.</p>
 <p class="verse">﴿بَدِيعُ السَّمَاوَاتِ وَالْأَرْضِ﴾</p>
-<p class="reference">(البقرة: 117)</p>
+<p class="ref">(البقرة: 117)</p>
 <p>كل هذه الأسماء — العظيم والجليل والكبير والملك والعزيز والقهّار</p>
 <p>والجبّار والمتكبّر والعليّ والمتعالي والقوي والمتين والقادر والمقتدر</p>
 <p>والماجد والمجيد والمنتقم والبديع — كل واحد منها يملأ القلب هيبة. فكيف</p>
 <p>إذا اجتمعت كلها في ذات واحدة؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>ارفع رأسك الآن وانظر إلى السماء.</p>
 <p>هذه السماء التي تراها — بلا عمد تُرى — من رفعها؟ والشمس التي تطلع كل</p>
 <p>يوم في موعدها منذ ملايين السنين — من يديرها؟ والقمر الذي يتقلّب في</p>
 <p>منازله — من يحرّكه؟ والنجوم التي لا تُحصى — من نثرها؟</p>
 <p class="verse">**[﴿أَفَلَمْ يَنظُرُوا إِلَى السَّمَاءِ فَوْقَهُمْ كَيْفَ بَنَيْنَاهَا وَزَيَّنَّاهَا وَمَا لَهَا مِن</p>
 <p class="verse">فُرُوجٍ﴾]**</p>
-<p class="reference">(ق: 6)</p>
+<p class="ref">(ق: 6)</p>
 <p>ثم انظر إلى الأرض. الجبال التي تبدو لك ثابتة — هي أوتاد مغروسة في</p>
 <p>الأرض لتثبيتها. البحر الذي تراه — فيه من المخلوقات ما لا يعلمه إلا</p>
 <p>الله. والأرض نفسها — كرة تدور في فراغ بسرعة هائلة — ولا تشعر</p>
@@ -2226,7 +2053,7 @@ body { font-size: 16px; }
 <p>كأن شيئًا لم يكن. كأن هذا الكون يسير وحده.</p>
 <p>هذا هو ضعف التعظيم. أن تعيش في آيات الله ولا تراها. أن تمشي فوق أرضه</p>
 <p>وتحت سمائه وبين مخلوقاته — ولا يرتجف قلبك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والتعظيم لا يعني فقط أن تتأمل في الكون. التعظيم يعني أن تنظر إلى حياتك</p>
 <p>أنت.</p>
 <p>كم مرة عصيت الله — وأنت تعلم أنه الملك؟ كم مرة تكبّرت — وأنت تعلم</p>
@@ -2240,20 +2067,20 @@ body { font-size: 16px; }
 <p>الناس أو الخوف أو الرغبة؟ هذا الاسم يُعيد الأحجام إلى حقيقتها: ما كان</p>
 <p>كبيرًا في قلبك يصغر — وما كان صغيرًا يكبر — حين تعرف</p>
 <p>العظيم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الخشية ليست الخوف.</p>
 <p>الخوف قد يكون من مجهول. تخاف مما لا تعرف. لكن الخشية لا تكون إلا مع</p>
 <p>العلم. تخشى الله لأنك تعرفه. كلما عرفته أكثر — خشيته أكثر.</p>
 <p class="verse">﴿إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ﴾</p>
-<p class="reference">(فاطر: 28)</p>
+<p class="ref">(فاطر: 28)</p>
 <p>إنما. أداة حصر. لا يخشى الله حقًا إلا من يعلم. من يعلم عظمته. من يعلم</p>
 <p>جلاله. من يعلم قوته. من يعلم أنه يرى ويسمع ويحاسب. هذا العلم هو الذي</p>
 <p>يولّد الخشية الحقيقية.</p>
 <p>والخشية ليست رعبًا يشلّ. هي هيبة تؤدّب. هيبة تجعلك تقف عند حدود الله فلا</p>
 <p>تتجاوزها. تجعلك تزن كلماتك. تراقب أفعالك. تراجع نياتك. ليس خوفًا من</p>
 <p>العقوبة فقط — بل إجلالًا لمن تقف بين يديه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والتعظيم يصنع في القلب شيئًا عجيبًا: يُصغّر كل ما سوى الله.</p>
 <p>حين يمتلئ قلبك بعظمة الله — يصغر في عينك كل شيء آخر. يصغر المال. يصغر</p>
 <p>الجاه. يصغر رأي الناس. يصغر الخوف من المخلوقين. يصغر حتى الموت. لأنك</p>
@@ -2262,10 +2089,10 @@ body { font-size: 16px; }
 <p>في قلبه شيء سواه. لم يخف من ظالم. لم يتراجع أمام باطل. لم ينحنِ لغير</p>
 <p>الله.</p>
 <p class="hadith bold">«لا يملأ جوفَ ابنِ آدم إلا التراب»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>الإنسان لا يشبع. لكن من عظّم الله — شبع. شبع لأنه وجد ما هو أكبر من كل</p>
 <p>ما تقدمه الدنيا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والتعظيم يظهر أثره في الصلاة بوضوح.</p>
 <p>حين تكبّر وتقول «الله أكبر» — هل تستحضر أنك تقف أمام الملك الحق؟ حين</p>
 <p>تركع — هل تستحضر أنك تنحني للعظيم؟ حين تسجد — هل تستحضر أنك تضع أشرف</p>
@@ -2273,8 +2100,8 @@ body { font-size: 16px; }
 <p>من صلّى بتعظيم — تغيّرت صلاته كلها. صارت صلاة من يقف أمام ملك. كل حركة</p>
 <p>فيها وقار. كل كلمة فيها أدب. كل سجدة فيها خضوع حقيقي — لا مجرد وضع</p>
 <p>جبهة على الأرض.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>التعظيم والمحبة لا يتناقضان. بل كل منهما يُقوّي الآخر.</p>
 <p>المحبة بلا تعظيم — جرأة. يحب الله فيتراخى في حدوده. يأمن</p>
 <p>فيتمادى.</p>
@@ -2287,10 +2114,10 @@ body { font-size: 16px; }
 <p>وهذا الجمع بين المحبة والتعظيم هو الذي يقود إلى المقام التالي: التسليم.</p>
 <p>لأن من أحب الله وعظّمه — سلّم له أمره. رضي بقضائه. ووثق</p>
 <p>بحكمته.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>سؤال:</p>
-<p class="bold-text">هل الله عظيم في قلبك — فعلًا؟</p>
+<p class="strong">هل الله عظيم في قلبك — فعلًا؟</p>
 <p>ليس في ذهنك. في قلبك.</p>
 <p>هل تشعر بعظمته حين تقول «الله أكبر»؟ هل يرتجف قلبك حين تسمع آياته؟ هل</p>
 <p>يصغر في عينك كل شيء حين تتذكر أنك عبد الملك العظيم الجبّار؟</p>
@@ -2302,7 +2129,7 @@ body { font-size: 16px; }
 <p>والبحار. في جسدك نفسه — كيف يعمل بلا أن تأمره. في النعم التي لا</p>
 <p>تحصيها. في القدرة التي لا تحدّها. كل تأمّل يزيد التعظيم. وكل تعظيم يزيد</p>
 <p>الخشية. وكل خشية تزيد القرب.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>جرّب هذا اليوم: في صلاتك القادمة، حين تقول «الله أكبر» — توقف لحظة قبل</p>
 <p>أن تبدأ القراءة. واستحضر أنك تقف أمام الملك العظيم الجبّار. لحظة واحدة</p>
 <p>فقط — وستشعر بالفرق.</p>
@@ -2320,47 +2147,46 @@ body { font-size: 16px; }
 <p>كل مخلوق. يا جبّار، اجبر كسرنا وارفع ذلّنا. يا كبير يا متكبّر، لا تجعلنا</p>
 <p>ممن ينازعك الكبرياء — واجعلنا ممن يسجد لعظمتك بقلبه قبل</p>
 <p>جبهته.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">﴿وَعَنَتِ الْوُجُوهُ لِلْحَيِّ الْقَيُّومِ وَقَدْ خَابَ مَنْ حَمَلَ ظُلْمًا﴾</p>
-<p class="reference">(طه: 111)</p>
+<p class="ref">(طه: 111)</p>
 
   </div>
 </section>
 
-<section id="ch11" class="chapter">
-  <div class="chapter-header">
+<section id="ch11" class="ch">
+  <div class="chd">
     <h2>الفصل العاشر</h2>
-    <div class="chapter-subtitle">التسليم</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">التسليم</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">**[﴿فَلَا وَرَبِّكَ لَا يُؤْمِنُونَ حَتَّىٰ يُحَكِّمُوكَ فِيمَا شَجَرَ بَيْنَهُمْ ثُمَّ لَا يَجِدُوا فِي أَنفُسِهِمْ</p>
 <p class="verse">حَرَجًا مِّمَّا قَضَيْتَ وَيُسَلِّمُوا تَسْلِيمًا﴾]**</p>
-<p class="reference">(النساء: 65)</p>
-<p class="bold-text">التسليم</p>
+<p class="ref">(النساء: 65)</p>
+<p class="strong">التسليم</p>
 <p>الحَكَم ، الحَكِيم ، العَدْل ، الفَتَّاح ، المُقْسِط</p>
 <p>من أحب الله وعظّمه... سلّم له. لأنك لا تعترض على من تحب</p>
 <p>وتعظّم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>ماذا لو لم يتغيّر ما دعوت الله أن يُغيّره؟</p>
 <p>عرفت الله. واستيقظت. وراقبته. واستحييت منه. وعرفت فقرك إليه. ورجعت</p>
 <p>تائبًا. ورجوت رحمته. وأحببته. وعظّمته.</p>
 <p>والآن يُسألك سؤال واحد:</p>
-<p class="bold-text">هل تسلّم؟</p>
+<p class="strong">هل تسلّم؟</p>
 <p>هل تسلّم أمرك لله — حتى فيما لا تفهم؟ حتى فيما يؤلم؟ حتى فيما يبدو لك</p>
 <p>ظلمًا ولا تدري أن وراءه حكمة؟</p>
 <p>هذا هو مقام التسليم. وهو من أصعب المقامات على النفس. لأنه يطلب منك أن</p>
 <p>تتخلى عن شيء يعزّ على الإنسان: السيطرة. الفهم. القدرة على</p>
 <p>التفسير.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الحكم. والحكم هو الذي يفصل بين الأمور بحكمه. لا يُعقّب على حكمه أحد.</p>
 <p>ولا يُراجعه أحد. ولا يُنقض حكمه.</p>
 <p class="verse">﴿أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ﴾</p>
-<p class="reference">(التين: 8)</p>
+<p class="ref">(التين: 8)</p>
 <p>سؤال من الله — وجوابه واضح: بلى. هو أحكم الحاكمين. حكمه أعدل الأحكام.</p>
 <p>وقضاؤه أحسن القضاء. حتى لو لم ترَ ذلك الآن.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الحكيم. والحكمة أن تُوضع الأمور في مواضعها الصحيحة. كل شيء في مكانه.</p>
 <p>كل أمر في وقته. كل قدر بمقدار.</p>
 <p>لا يفعل الله شيئًا عبثًا. لا يبتليك عبثًا. لا يمنعك عبثًا. لا يعطيك عبثًا.</p>
@@ -2368,37 +2194,37 @@ body { font-size: 16px; }
 <p>لم تظهر لك في الدنيا أصلًا.</p>
 <p class="verse">**[﴿وَعَسَىٰ أَن تَكْرَهُوا شَيْئًا وَهُوَ خَيْرٌ لَّكُمْ وَعَسَىٰ أَن تُحِبُّوا شَيْئًا وَهُوَ شَرٌّ لَّكُمْ وَاللَّهُ</p>
 <p class="verse">يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ﴾]**</p>
-<p class="reference">(البقرة: 216)</p>
+<p class="ref">(البقرة: 216)</p>
 <p>الله يعلم وأنتم لا تعلمون. هذه الجملة وحدها — لو استقرت في القلب —</p>
 <p>تكفي لكل تسليم. لأنها تقول لك: أنت ترى جزءًا — وهو يرى الكل. أنت ترى</p>
 <p>اللحظة — وهو يرى الطريق كله من بدايته إلى نهايته.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو العدل. لا يظلم أحدًا. لا يظلم مثقال ذرة. ما أصابك من خير فمن الله.</p>
 <p>وما أصابك من مصيبة فبحكمته — لا بظلمه.</p>
 <p>**[«يا عبادي، إني حرَّمتُ الظلمَ على نفسي وجعلتُه بينكم محرَّمًا فلا</p>
 <p>تظالموا»]**</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>حرّم الظلم على نفسه. الله — القادر على كل شيء — اختار ألا يظلم. ليس</p>
 <p>لأنه لا يقدر — بل لأنه عدل. والعدل صفته. والظلم مستحيل</p>
 <p>عليه.</p>
 <p>فإن أصابك ما أصابك — فاعلم أنه ليس ظلمًا. وإن لم تفهم لماذا — فاعلم</p>
 <p>أنك لا ترى ما يراه الله.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الفتّاح. والفتّاح هو الذي يفتح كل مغلق. يفتح أبواب الرزق حين تُغلق.</p>
 <p>يفتح أبواب الفرج حين تضيق. يفتح أبواب البصيرة حين تُعمي. يفتح أبواب</p>
 <p>القلوب حين تقسو.</p>
 <p class="verse">**[﴿مَا يَفْتَحِ اللَّهُ لِلنَّاسِ مِن رَّحْمَةٍ فَلَا مُمْسِكَ لَهَا وَمَا يُمْسِكْ فَلَا مُرْسِلَ لَهُ مِن</p>
 <p class="verse">بَعْدِهِ﴾]**</p>
-<p class="reference">(فاطر: 2)</p>
+<p class="ref">(فاطر: 2)</p>
 <p>إذا فتح — لا أحد يغلق. وإذا أغلق — لا أحد يفتح. وهذا يعني أن كل</p>
 <p>إغلاق في حياتك — هو فعله. وكل فتح — هو فعله. والتسليم أن تثق أنه</p>
 <p>يغلق ليفتح لك ما هو خير.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المقسط. والقسط هو العدل الذي لا يميل. يعطي كل ذي حق حقه. لا يُحابي</p>
 <p>أحدًا. لا يظلم أحدًا. يوم القيامة يُنصب الميزان — ولا تظلم نفس</p>
 <p>شيئًا.</p>
 <p class="verse">﴿وَنَضَعُ الْمَوَازِينَ الْقِسْطَ لِيَوْمِ الْقِيَامَةِ فَلَا تُظْلَمُ نَفْسٌ شَيْئًا﴾</p>
-<p class="reference">(الأنبياء: 47)</p>
+<p class="ref">(الأنبياء: 47)</p>
 <p>ومن أسمائه التي تُرسّخ التسليم في القلب: المُقدِّم المُؤخِّر. يُقدّم من يشاء</p>
 <p>ويؤخّر من يشاء — بحكمته لا بهواك. ربما أخّرك عن شيء تريده — ليُقدّمك إلى</p>
 <p>ما هو خير منه. وربما قدّمك إلى ابتلاء — ليؤخّرك عن بلاء أعظم لا</p>
@@ -2411,14 +2237,14 @@ body { font-size: 16px; }
 <p>الحقيقي ليس في الفقر ولا في الضعف — بل في معصيته.</p>
 <p class="verse">**[﴿قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن</p>
 <p class="verse">تَشَاءُ وَتُذِلُّ مَن تَشَاءُ بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ﴾]**</p>
-<p class="reference">(آل عمران: 26)</p>
+<p class="ref">(آل عمران: 26)</p>
 <p>بيدك الخير. كله. التقديم خير. والتأخير خير. والخفض خير. والرفع خير.</p>
 <p>والعزّ خير. والذلّ خير. كله بيده. وكله بحكمته. وعليك أن تسلّم.</p>
 <p>كل هذه الأسماء — الحكم والحكيم والعدل والفتّاح والمقسط والمقدّم والمؤخّر</p>
 <p>والخافض والرافع والمعزّ والمذلّ — كلها تقول لك: الذي يدبّر أمرك أحكم منك</p>
 <p>وأعدل منك وأرحم بك منك بنفسك. فسلّم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>أصعب لحظات التسليم ليست حين يحدث لك شيء مؤلم. أصعبها حين يحدث لك شيء</p>
 <p>مؤلم — ولا تفهم لماذا.</p>
 <p>حين يموت من تحب — وكان شابًا صالحًا. حين يُصاب طفلك بمرض — ولا ذنب له.</p>
@@ -2428,7 +2254,7 @@ body { font-size: 16px; }
 <p>لأن التسليم حين يكون كل شيء مفهومًا — سهل. كلنا نسلّم حين نرى الحكمة.</p>
 <p>لكن التسليم الحقيقي هو أن تسلّم حين لا ترى شيئًا. حين يكون الألم حاضرًا</p>
 <p>والحكمة غائبة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهنا تحتاج إلى ثلاثة أشياء عرفتها في هذا الكتاب:</p>
 <p>**أولًا:** أن تعرف أنه حكيم — فلا شيء عنده عبث. حتى لو لم تفهم — هو</p>
 <p>يعلم وأنت لا تعلم.</p>
@@ -2438,7 +2264,7 @@ body { font-size: 16px; }
 <p>يدبّر أمرك ليس عدلًا فقط — بل رحيم أيضًا. وعدله ممزوج برحمته.</p>
 <p>من حمل هذه الثلاثة في قلبه — سلّم. ليس تسليم المُجبر. بل تسليم</p>
 <p>الواثق.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وتأمّل: كم مرة حدث لك شيء ظننته كارثة — ثم اكتشفت بعد أشهر أو سنوات</p>
 <p>أنه كان خيرًا لك؟</p>
 <p>وظيفة فقدتها — فانفتح لك باب أفضل منها. علاقة انقطعت — فحفظك الله</p>
@@ -2453,12 +2279,12 @@ body { font-size: 16px; }
 <p class="hadith">«رضيت بالله ربًّا» — وما يقوله قلبك حين يشتد البلاء... هذه المسافة هي ما</p>
 <p>يقيسه التسليم.</p>
 <p>هذا هو التسليم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>التسليم ليس أن تقول بلسانك: رضيت بقضاء الله. التسليم أن لا يجد قلبك</p>
 <p>حرجًا من قضاء الله.</p>
 <p class="verse">﴿ثُمَّ لَا يَجِدُوا فِي أَنفُسِهِمْ حَرَجًا مِّمَّا قَضَيْتَ وَيُسَلِّمُوا تَسْلِيمًا﴾</p>
-<p class="reference">(النساء: 65)</p>
+<p class="ref">(النساء: 65)</p>
 <p>لا يجدوا في أنفسهم حرجًا. ليس في ألسنتهم — في أنفسهم. في داخلهم. لا</p>
 <p>ضيق. لا اعتراض. لا سخط مكتوم. لا سؤال غاضب: لماذا فعلت بي</p>
 <p>هذا؟</p>
@@ -2467,7 +2293,7 @@ body { font-size: 16px; }
 <p>وباطنًا.</p>
 <p>هذا مقام عالٍ. لا يدّعيه عاقل بسهولة. لكنه ممكن — لمن عرف الله</p>
 <p>حقًا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والتسليم له درجات:</p>
 <p>**أدناها:** أن تصبر على القضاء ولا تعترض بلسانك. تتألم لكنك لا تشتكي من</p>
 <p>الله. هذا صبر — وهو محمود.</p>
@@ -2478,8 +2304,8 @@ body { font-size: 16px; }
 <p>لا يُطلب منك أن تبدأ من الأعلى. ابدأ من الصبر. ثم اسعَ إلى الرضا. والشكر</p>
 <p>يأتي حين يمتلئ قلبك بمعرفة الله — وهذا ما يفعله هذا</p>
 <p>الكتاب.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>من أصعب أشكال التسليم: التسليم في الدعاء.</p>
 <p>أن تدعو الله بشيء تريده بكل قلبك — ثم لا يتحقق. أو يتأخر. أو يتحقق</p>
 <p>بشكل مختلف عما تريد.</p>
@@ -2493,8 +2319,8 @@ body { font-size: 16px; }
 <p>التسليم في الدعاء يعني أن تدعو بكل قلبك — ثم تترك النتيجة لله. لا</p>
 <p>تتوقف عن الدعاء. لكن لا تشترط الإجابة بالشكل الذي تريده. ادعُ —</p>
 <p>وسلّم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>ما الذي لم تسلّم فيه بعد؟</p>
 <p>هل هناك قدر في حياتك لا تزال تعترض عليه في قلبك؟ خسارة لم تتصالح معها؟</p>
 <p>ألم لم تفهم حكمته؟ دعاء لم يُستجب فأحبطك؟</p>
@@ -2504,7 +2330,7 @@ body { font-size: 16px; }
 <p>— وترضى. أن تسأل: لماذا؟ ثم تقول: لكنني أثق بك يا رب.</p>
 <p>هذا ليس ضعفًا. هذا أعظم قوة يملكها الإنسان. أن يقف أمام ما لا يفهمه —</p>
 <p>ويسلّم. لا لأنه لا يشعر. بل لأنه يعرف من يتعامل معه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وحين يسلّم القلب — يحصل شيء عجيب.</p>
 <p>ينزل عليه سكينة. سكينة لا يعرفها من لم يسلّم. سكينة من يلقي حمله على</p>
 <p>الله ولا يحمله وحده. سكينة من يقول: الأمر أمر الله — وحكم الله</p>
@@ -2523,36 +2349,35 @@ body { font-size: 16px; }
 <p>يا من لا يظلم مثقال ذرة — ارزقنا حسن الظن بك في كل ما يصيبنا. يا فتّاح،</p>
 <p>يا من يفتح كل مغلق ويُفرّج كل كرب — افتح علينا أبواب رحمتك وحكمتك، وأرنا</p>
 <p>من لطفك ما يطمئن قلوبنا حين تعجز عقولنا.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿وَمَن يُسْلِمْ وَجْهَهُ إِلَى اللَّهِ وَهُوَ مُحْسِنٌ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ</p>
 <p class="verse">الْوُثْقَىٰ﴾]**</p>
-<p class="reference">(لقمان: 22)</p>
+<p class="ref">(لقمان: 22)</p>
 
   </div>
 </section>
 
-<section id="ch12" class="chapter">
-  <div class="chapter-header">
+<section id="ch12" class="ch">
+  <div class="chd">
     <h2>الفصل الحادي عشر</h2>
-    <div class="chapter-subtitle">الإحسان</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">الإحسان</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">﴿إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ﴾</p>
-<p class="reference">(النحل: 90)</p>
-<p class="bold-text">الإحسان</p>
+<p class="ref">(النحل: 90)</p>
+<p class="strong">الإحسان</p>
 <p>النُّور ، القُدُّوس ، السَّلَام ، المُؤْمِن ، المُهَيْمِن</p>
 <p>من عرف الله... واستيقظ... وراقب... واستحيا... وافتقر... ورجع... ورجا...</p>
 <p>وأحبّ... وعظّم... وسلّم — وصل.</p>
 <p>هذا آخر مقام في الرحلة. اقرأه ببطء. وادعُ الله قبل أن تبدأ أن يفتح</p>
 <p>لك.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>عُدْ إلى حيث بدأنا.</p>
 <p>في أول صفحة من هذا الكتاب، قرأت حديث جبريل عليه السلام:</p>
 <p>**[«ما الإحسان؟ قال: أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه</p>
 <p>يراك»]**</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>حين قرأت هذا الحديث في البداية — كان كلامًا جميلًا. لكنك لم تكن تعرف</p>
 <p>معناه بعد.</p>
 <p>الآن — بعد كل هذه الرحلة — أنت تعرف.</p>
@@ -2562,34 +2387,34 @@ body { font-size: 16px; }
 <p>سلّمت له.</p>
 <p>الإحسان ليس مقامًا جديدًا تتعلمه. الإحسان ثمرة كل ما قبله. هو الحصاد. هو</p>
 <p>النتيجة. هو ما يحدث حين تجتمع هذه المعاني كلها في قلب واحد.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>أن تعبد الله كأنك تراه.</p>
 <p>ليس أن تتخيّله — تعالى الله. بل أن يمتلئ قلبك بالحضور معه حتى كأنه لا</p>
 <p>حجاب بينك وبينه. حتى تكون صلاتك لقاءً حقيقيًا. وذكرك مناجاة حقيقية. ودعاؤك</p>
 <p>حديثًا مع من تعلم أنه يسمعك.</p>
 <p>هذا لا يحدث بقرار. يحدث بمعرفة. كلما عرفت الله أكثر — اقتربت من هذا</p>
 <p>المقام أكثر.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والأسماء التي ترافق هذا المقام هي أسماء النور والطهارة</p>
 <p>والسلام.</p>
 <p>هو النور. والنور هو الذي أنار السماوات والأرض بنوره. وأنار قلوب</p>
 <p>المؤمنين بهدايته. وأنار بصائرهم بمعرفته.</p>
 <p class="verse">﴿اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ﴾</p>
-<p class="reference">(النور: 35)</p>
+<p class="ref">(النور: 35)</p>
 <p>المحسن يعبد الله في نور. ليس في ظلمة خوف فقط. ولا في غموض جهل. بل في</p>
 <p>نور معرفة. يرى بقلبه ما لا يراه غيره. يرى يد الله في كل شيء. يرى حكمته</p>
 <p>في كل أمر. يرى رحمته في كل ابتلاء. هذا النور الذي يُلقيه الله في قلب من</p>
 <p>يشاء.</p>
 <p class="verse">﴿وَمَن لَّمْ يَجْعَلِ اللَّهُ لَهُ نُورًا فَمَا لَهُ مِن نُّورٍ﴾</p>
-<p class="reference">(النور: 40)</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="ref">(النور: 40)</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو القدّوس. المنزّه عن كل نقص. الطاهر من كل عيب. الذي لا يعتريه خلل ولا</p>
 <p>يمسّه سوء.</p>
 <p>والمحسن يسعى إلى تطهير قلبه — لأنه يقف أمام القدّوس. لا يليق بقلب فيه</p>
 <p>غشّ أو رياء أو كبر أن يقف أمام القدّوس. ولهذا كان أهل الإحسان أكثر الناس</p>
 <p>تفتيشًا لقلوبهم. يتفقّدون نياتهم. يُنقّون بواطنهم. يستحيون أن يلقوا الله</p>
 <p>بقلب ملوّث.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو السلام. والسلام له معنيان:</p>
 <p>**الأول:** المنزّه عن كل عيب ونقص — كالقدّوس.</p>
 <p>**الثاني:** مصدر السلام والأمان. منه السلام. وإليه يعود السلام. وكل</p>
@@ -2597,13 +2422,13 @@ body { font-size: 16px; }
 <p>اسمه.</p>
 <p>والمحسن يعيش في سلام — سلام داخلي عميق. لأنه صالح مع الله. وكل من صلح</p>
 <p>مع الله — وجد السلام ولو اضطربت الدنيا من حوله.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المؤمن. والمؤمن من أسماء الله يعني: الذي يُصدّق عباده ويُؤمّنهم. يُصدّق</p>
 <p>وعده فلا يُخلف. ويُؤمّن خائفيه فلا يُضيعهم.</p>
 <p>والمحسن يعيش في أمان — لأنه مع المؤمن. لا يخاف على رزقه لأن المؤمن</p>
 <p>ضمنه. لا يخاف على أهله لأن المؤمن يحفظهم. لا يخاف من المستقبل لأن المؤمن</p>
 <p>يعلمه.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو المهيمن. المُطّلع على كل شيء. الحافظ لكل شيء. الذي لا يغيب عن علمه</p>
 <p>شيء ولا يخرج عن سلطانه شيء.</p>
 <p>والمحسن يعلم أن المهيمن يرى عمله كله — فيُحسنه. يُحسن صلاته لأن المهيمن</p>
@@ -2616,8 +2441,8 @@ body { font-size: 16px; }
 <p>ستة أسماء: النور والقدّوس والسلام والمؤمن والمهيمن والصبور. كلها ترسم</p>
 <p>صورة المقام الأخير في الرحلة: مقام من يعبد الله بنور المعرفة، وطهارة</p>
 <p>القلب، وسلام النفس، وأمان الإيمان، وصبر المحسنين.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>الإحسان ليس حالة خارقة لا يعيشها إلا الأولياء.</p>
 <p>الإحسان يظهر في أشياء بسيطة جدًا.</p>
 <p>يظهر حين تصلي فتشعر أنك تقف بين يدي الله فعلًا — ولو لدقيقة واحدة في</p>
@@ -2633,10 +2458,10 @@ body { font-size: 16px; }
 <p>وحين تنظر إلى نفسك فتشعر بستره.</p>
 <p>هذه كلها لحظات إحسان. لحظات تعبد الله فيها كأنك تراه. قد تكون قصيرة. قد</p>
 <p>لا تدوم. لكنها حقيقية. وكل لحظة منها — نعمة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>والإحسان ليس فقط في العبادة. هو في كل شيء.</p>
 <p class="hadith bold">«إنَّ اللهَ كتب الإحسان على كل شيء»</p>
-<p class="reference">(رواه مسلم)</p>
+<p class="ref">(رواه مسلم)</p>
 <p>على كل شيء. في عملك. في كلامك. في صمتك. في تعاملك مع أهلك. في تعاملك مع</p>
 <p>الناس. في تعاملك مع نفسك. حتى في ذبح الحيوان — أمر الله بالإحسان</p>
 <p>فيه.</p>
@@ -2645,8 +2470,8 @@ body { font-size: 16px; }
 <p>هذا يُغيّر كل شيء. يُغيّر طريقة عملك. وطريقة كلامك. وطريقة تعاملك مع زوجتك</p>
 <p>وأولادك وجيرانك وزملائك. لأنك في كل لحظة — تفعل ما تفعله أمام</p>
 <p>الله.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>الإحسان هو أعلى مراتب الدين. الإسلام ثم الإيمان ثم الإحسان.</p>
 <p>المسلم يطيع بجوارحه. المؤمن يراقب بقلبه. المحسن يعبد بروحه.</p>
 <p>والرحلة التي مشيتها في هذا الكتاب هي هذه الرحلة بالضبط:</p>
@@ -2655,7 +2480,7 @@ body { font-size: 16px; }
 <p>والإحسان ليس نقطة وصول تقف عندها. هو حالة تتجدد. تزيد وتنقص. تقوى</p>
 <p>وتضعف. لكنها — كلما ذقتها — لا تنساها. وكلما ذقتها — تشتاق</p>
 <p>إليها.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وعلامة المحسن: أنه لا يرضى عن نفسه.</p>
 <p>ليس لأنه يائس. بل لأنه يعرف أنه مقصّر. كلما عرف الله أكثر — عرف تقصيره</p>
 <p>أكثر. وكلما اقترب — شعر أنه بحاجة إلى مزيد من القرب.</p>
@@ -2663,8 +2488,8 @@ body { font-size: 16px; }
 <p>أنا في الطريق.</p>
 <p>وهذا أجمل ما في الإحسان: أنه ليس نهاية. بل بداية نوع جديد من الحياة.</p>
 <p>حياة مع الله.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">وقفة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">وقفة</p>
 <p>لعلك تسأل: كيف أصل إلى هذا المقام عمليًا؟</p>
 <p>الجواب بسيط — وقد عشته في هذا الكتاب:</p>
 <p>اعرف الله.</p>
@@ -2675,11 +2500,11 @@ body { font-size: 16px; }
 <p>ثم الاستمرار. لا تتوقف. الطريق لا ينتهي. وكل يوم فرصة جديدة لتقترب</p>
 <p>خطوة.</p>
 <p class="hadith bold">«أحبُّ الأعمال إلى الله أدومُها وإن قلّ»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>أدومها — وإن قلّ. ليس الأكثر. الأدوم. عمل صغير تداوم عليه خير من عمل</p>
 <p>كبير ينقطع.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٤</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٤</p>
 <p>هل تستطيع — بعد كل ما قرأت — أن تصلي صلاة واحدة كأنك ترى</p>
 <p>الله؟</p>
 <p>صلاة واحدة. ليس كل الصلوات. واحدة.</p>
@@ -2689,7 +2514,7 @@ body { font-size: 16px; }
 <p>إن فعلت ذلك — ولو مرة واحدة — فقد ذقت الإحسان.</p>
 <p>والذوق الأول هو البداية. ثم تسعى لأن يتكرر. وكلما تكرر — أصبح أسهل.</p>
 <p>وكلما أصبح أسهل — صار حالة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وصلت إلى هنا.</p>
 <p>لكن الرحلة لم تنتهِ.</p>
 <p>وقفة عملية: اختر اليوم اسمًا واحدًا من أسماء الله — أيّ اسم شعرت أنه</p>
@@ -2703,36 +2528,35 @@ body { font-size: 16px; }
 <p>علينا سلامك وأمانك. يا مؤمن يا مهيمن، آمِنّا من كل خوف واجعلنا ممن يعبدك</p>
 <p>كأنه يراك. اللهم اجعلنا من المحسنين — في صلاتنا وصيامنا وذكرنا وكل</p>
 <p>أمرنا — واجعل كل لحظة من حياتنا عبادة لك لا نغفل فيها عنك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">﴿هَلْ جَزَاءُ الْإِحْسَانِ إِلَّا الْإِحْسَانُ﴾</p>
-<p class="reference">(الرحمن: 60)</p>
+<p class="ref">(الرحمن: 60)</p>
 
   </div>
 </section>
 
-<section id="ch13" class="chapter">
-  <div class="chapter-header">
+<section id="ch13" class="ch">
+  <div class="chd">
     <h2>الفصل الأخير</h2>
-    <div class="chapter-subtitle">العودة إلى الله</div>
-    <div class="separator">✦ ✦ ✦</div>
+    <div class="csub">العودة إلى الله</div>
   </div>
-  <div class="chapter-content">
+  <div class="cc">
     <p class="verse">**[﴿هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَٰنُ</p>
 <p class="verse">الرَّحِيمُ﴾]**</p>
-<p class="reference">(الحشر: 22)</p>
-<p class="bold-text">الله</p>
+<p class="ref">(الحشر: 22)</p>
+<p class="strong">الله</p>
 <p>العودة إلى الاسم الجامع — بقلب جديد</p>
 <p>في البداية عرفتَ الاسم. في النهاية — إن شاء الله — عرفتَ صاحب</p>
 <p>الاسم.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">١</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">١</p>
 <p>ها أنت تعود إلى حيث بدأت.</p>
 <p>الفصل الأول كان عن الله. وهذا الفصل الأخير — عن الله.</p>
 <p>لكنك لست نفس الشخص.</p>
 <p>في البداية كان اسم «الله» كلمةً تعرفها. والآن — بعد أن مشيت هذا الطريق</p>
 <p>— أصبحت تعرف من وراء الكلمة. عرفت أسماءه فعرفته. عرفت صفاته فأحببته.</p>
 <p>عرفت أفعاله فسلّمت له.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>مررت في هذه الرحلة بأسماء كثيرة — كل واحد منها كشف لك وجهًا من وجوه</p>
 <p>عظمة الله.</p>
 <p>عرفت أنه الخالق البارئ المصوّر — فرأيت يده في كل شيء حولك وفي نفسك.</p>
@@ -2751,22 +2575,22 @@ body { font-size: 16px; }
 <p>تراه.</p>
 <p>كل هذه الأسماء — تسعة وتسعون اسمًا — ليست أرقامًا تحفظها. هي طريق.</p>
 <p>طريق يبدأ بالمعرفة وينتهي بالمحبة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وهو الحق. الموجود حقًا. الثابت حقًا. كل شيء سواه يتغيّر ويزول — وهو الحق</p>
 <p>الذي لا يزول.</p>
 <p class="verse">﴿فَذَٰلِكُمُ اللَّهُ رَبُّكُمُ الْحَقُّ فَمَاذَا بَعْدَ الْحَقِّ إِلَّا الضَّلَالُ﴾</p>
-<p class="reference">(يونس: 32)</p>
+<p class="ref">(يونس: 32)</p>
 <p>وهو الجامع. الذي سيجمع الخلائق كلها ليوم لا ريب فيه. يوم تقف فيه بين</p>
 <p>يديه — وتعرف أن كل ما عرفته عنه في هذا الكتاب وفي حياتك كلها — كان</p>
 <p>حقًا.</p>
 <p>وهو ذو الجلال والإكرام. جلال يهيب. وإكرام يُدني. عظمة وكرم في آن واحد</p>
 <p>— وهذا هو الله الذي عرفته في هذه الرحلة.</p>
 <p class="verse">﴿تَبَارَكَ اسْمُ رَبِّكَ ذِي الْجَلَالِ وَالْإِكْرَامِ﴾</p>
-<p class="reference">(الرحمن: 78)</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٢</p>
+<p class="ref">(الرحمن: 78)</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٢</p>
 <p>ارجع الآن إلى السؤال الذي سألتك في الفصل الأول:</p>
-<p class="bold-text">ما مكان الله في قلبك؟</p>
+<p class="strong">ما مكان الله في قلبك؟</p>
 <p>حين سُئلت هذا السؤال في البداية — ربما لم تعرف الإجابة. أو عرفتها</p>
 <p>وخجلت منها.</p>
 <p>والآن — بعد كل هذه الرحلة — هل تغيّر شيء؟</p>
@@ -2777,8 +2601,8 @@ body { font-size: 16px; }
 <p>وإن كان الجواب لا أشعر بتغيّر — فلا تيأس. ارجع واقرأ من جديد. ببطء.</p>
 <p>بقلبك. وادعُ الله أن يفتح لك. لأن الفتّاح لا يُغلق بابًا أمام من يطرقه</p>
 <p>بصدق.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">٣</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">٣</p>
 <p>هذا الكتاب انتهى. لكن الطريق لم ينتهِ.</p>
 <p>الطريق إلى الله ليس كتابًا تقرؤه ثم تضعه على الرف. الطريق حياة. كل يوم</p>
 <p>فيه فرصة جديدة لمعرفته أكثر. كل صلاة فرصة جديدة للقرب منه. كل ذكر فرصة</p>
@@ -2787,26 +2611,26 @@ body { font-size: 16px; }
 <p>تحفظها. هي مفاتيح. كل اسم مفتاح لباب. وكل باب يقودك إلى معرفة أعمق وقرب</p>
 <p>أكبر.</p>
 <p class="verse">﴿وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا﴾</p>
-<p class="reference">(الأعراف: 180)</p>
+<p class="ref">(الأعراف: 180)</p>
 <p>ادعُه بها. ليس فقط: قل «يا رحمن يا رحيم». بل: ادعُه وأنت تعرف من هو</p>
 <p>الرحمن. وأنت تعرف من هو الرحيم. وأنت تعرف ما يعني أن تقف بين يديه</p>
 <p>وتسأله.</p>
 <p>هذه المعرفة هي التي تُحوّل الدعاء من كلمات إلى حياة. ومن عادة إلى عبادة.</p>
 <p>ومن طلب إلى مناجاة.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>ختامًا:</p>
 <p>في البداية عرفتَ الاسم.</p>
 <p>والآن — إن شاء الله — بدأتَ تعرف صاحب الاسم.</p>
 <p>فلا تتوقف. واسأل الله أن يزيدك. واقترب كل يوم خطوة. واعلم أنك كلما</p>
 <p>اقتربت — اقترب إليك أكثر.</p>
 <p class="hadith bold">«من تقرَّبَ إليَّ شبرًا تقرَّبتُ إليه ذراعًا»</p>
-<p class="reference">(متفق عليه)</p>
+<p class="ref">(متفق عليه)</p>
 <p>وقبل أن تُغلق هذا الكتاب — سؤال أخير:</p>
-<p class="bold-text">أيّ اسم من أسماء الله كشف لك شيئًا في قلبك؟</p>
+<p class="strong">أيّ اسم من أسماء الله كشف لك شيئًا في قلبك؟</p>
 <p>احتفظ بهذا الاسم. وادعُ الله به كل يوم. واجعله بابك إلى</p>
 <p>الله.</p>
 <p>والحمد لله رب العالمين.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>اللهم يا الله، يا من لك الأسماء الحسنى والصفات العلى — نسألك بكل اسم</p>
 <p>هو لك، سمّيت به نفسك، أو أنزلته في كتابك، أو علّمته أحدًا من خلقك، أو</p>
 <p>استأثرت به في علم الغيب عندك — أن تجعل القرآن ربيع قلوبنا ونور صدورنا</p>
@@ -2816,14 +2640,14 @@ body { font-size: 16px; }
 <p>اللهم اجعلنا من المحسنين. من الذين يعبدونك كأنهم يرونك.</p>
 <p>وإن لم نكن نراك — فإنك ترانا.</p>
 <p>اللهم عرّفنا بك. وأحيِ قلوبنا بأسمائك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p class="verse">**[﴿سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ ، وَسَلَامٌ عَلَى الْمُرْسَلِينَ ، وَالْحَمْدُ لِلَّهِ رَبِّ</p>
 <p class="verse">الْعَالَمِينَ﴾]**</p>
-<p class="reference">(الصافات: 180-182)</p>
-<p class="bold-text">إذا انتهيت من هذه الرحلة... فابدأها مرة أخرى.</p>
+<p class="ref">(الصافات: 180-182)</p>
+<p class="strong">إذا انتهيت من هذه الرحلة... فابدأها مرة أخرى.</p>
 <p>لأن معرفة الله طريق لا ينتهي.</p>
-<p class="bold-text">ما بعد الرحلة</p>
-<p class="bold-text">صحبة هذا الكتاب</p>
+<p class="strong">ما بعد الرحلة</p>
+<p class="strong">صحبة هذا الكتاب</p>
 <p>هذا الكتاب لا يُقرأ مرة واحدة ثم يُوضع.</p>
 <p>وهذا الكتاب لا يُقرأ بسرعة. اقرأ فصلًا واحدًا فقط في اليوم، ثم أغلق الكتاب</p>
 <p>واسأل نفسك: ماذا غيّر هذا الاسم في قلبي اليوم؟</p>
@@ -2831,8 +2655,8 @@ body { font-size: 16px; }
 <p>وقف مع السؤال الذي يطرحه على قلبك. ثم ادعُ الله بهذا الاسم طوال يومك —</p>
 <p>في صلاتك وذكرك ودعائك.</p>
 <p>اسم واحد في اليوم. لا أكثر. حتى تعيشه لا أن تمرّ عليه.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">كيف تعيش مع هذا الكتاب:</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">كيف تعيش مع هذا الكتاب:</p>
 <p>في الصباح — اقرأ فقرات اسم واحد من الأسماء التي مررت بها. لا تستعجل.</p>
 <p>اقرأ حتى تشعر بشيء.</p>
 <p>خلال اليوم — استحضر هذا الاسم في لحظاتك اليومية. إن كان اسم الرقيب</p>
@@ -2842,46 +2666,46 @@ body { font-size: 16px; }
 <p>واجعل سجودك مناجاة بهذا الاسم.</p>
 <p>قبل النوم — اسأل نفسك: هل عشت مع هذا الاسم اليوم؟ هل تغيّر شيء — ولو</p>
 <p>صغير — في قلبي؟ ثم ادعُ الله به قبل أن تنام.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وستجد — بإذن الله — أن كل مرة تعود فيها إلى اسم قرأته من قبل، تكتشف</p>
 <p>فيه شيئًا لم تنتبه إليه في المرة الأولى. لأنك تغيّرت. ولأن الأسماء الحسنى</p>
 <p>لا تنتهي معانيها.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">خريطة الرحلة</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">خريطة الرحلة</p>
 <p>هذا الكتاب رحلة في مقامات. كل مقام يقودك إلى الذي بعده. وهذه هي الخريطة</p>
 <p>الكاملة:</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>الغفلة</p>
 <p>↓</p>
-<p class="bold-text">الله — معرفة الإله الحق</p>
+<p class="strong">الله — معرفة الإله الحق</p>
 <p>↓</p>
-<p class="bold-text">اليقظة — الانتباه من نوم الغفلة</p>
+<p class="strong">اليقظة — الانتباه من نوم الغفلة</p>
 <p>↓</p>
-<p class="bold-text">المراقبة — استحضار أن الله يراك</p>
+<p class="strong">المراقبة — استحضار أن الله يراك</p>
 <p>↓</p>
-<p class="bold-text">الحياء — الخجل من كرم الله مع تقصيرك</p>
+<p class="strong">الحياء — الخجل من كرم الله مع تقصيرك</p>
 <p>↓</p>
-<p class="bold-text">الافتقار — معرفة أنك لا تملك شيئًا</p>
+<p class="strong">الافتقار — معرفة أنك لا تملك شيئًا</p>
 <p>↓</p>
-<p class="bold-text">الرجوع — العودة إلى الله بعد البعد</p>
+<p class="strong">الرجوع — العودة إلى الله بعد البعد</p>
 <p>↓</p>
-<p class="bold-text">الرجاء — الثقة برحمة الله</p>
+<p class="strong">الرجاء — الثقة برحمة الله</p>
 <p>↓</p>
-<p class="bold-text">المحبة — أن تحب الله وتشتاق إليه</p>
+<p class="strong">المحبة — أن تحب الله وتشتاق إليه</p>
 <p>↓</p>
-<p class="bold-text">التعظيم — أن تهاب الله لأنك تحبه</p>
+<p class="strong">التعظيم — أن تهاب الله لأنك تحبه</p>
 <p>↓</p>
-<p class="bold-text">التسليم — أن ترضى بقضائه وتثق بحكمته</p>
+<p class="strong">التسليم — أن ترضى بقضائه وتثق بحكمته</p>
 <p>↓</p>
-<p class="bold-text">الإحسان — أن تعبد الله كأنك تراه</p>
+<p class="strong">الإحسان — أن تعبد الله كأنك تراه</p>
 <p>↓</p>
-<p class="bold-text">الله — العودة إلى الاسم الجامع بقلب جديد</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">رحلة ٣٠ يومًا مع أسماء الله</p>
+<p class="strong">الله — العودة إلى الاسم الجامع بقلب جديد</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">رحلة ٣٠ يومًا مع أسماء الله</p>
 <p>إن أردت أن تجعل هذا الكتاب رفيقًا لك لا كتابًا تقرؤه مرة — فإليك هذه</p>
 <p>الرحلة:</p>
 <p>اسم واحد كل يوم. اقرأ ما كُتب عنه. ثم عِش معه يومك.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>اليوم ١: الله — اسأل نفسك: هل الله هو الأعظم في قلبي؟</p>
 <p>اليوم ٢: الأول والآخر — تأمّل: كل شيء يبدأ منه وينتهي</p>
 <p>إليه.</p>
@@ -2916,29 +2740,29 @@ body { font-size: 16px; }
 <p>اليوم ٢٩: الهادي — اسأل الله الهداية والثبات.</p>
 <p>اليوم ٣٠: الله — عُد إلى السؤال الأول: ما مكان الله في قلبك الآن —</p>
 <p>بعد هذه الرحلة؟</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">كيف تقرأ هذا الكتاب مرة ثانية</p>
-<p class="bold-text">القراءة الأولى: رحلة القلب.</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">كيف تقرأ هذا الكتاب مرة ثانية</p>
+<p class="strong">القراءة الأولى: رحلة القلب.</p>
 <p>اقرأ الكتاب كاملًا ببطء. توقّف عند كل اسم. واسمح لقلبك أن يتأثر</p>
 <p>ويتغيّر.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">القراءة الثانية: حفظ الأسماء.</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">القراءة الثانية: حفظ الأسماء.</p>
 <p>ارجع إلى كل فصل وركّز على الأسماء الواردة فيه. احفظها. واربطها بالمقام</p>
 <p>الذي تنتمي إليه. حتى تصبح الأسماء حاضرة في ذهنك وقلبك معًا.</p>
-<div class="separator">✦ ✦ ✦</div>
-<p class="bold-text">القراءة الثالثة: العمل بالمقامات.</p>
+<div class="sep">✦ ✦ ✦</div>
+<p class="strong">القراءة الثالثة: العمل بالمقامات.</p>
 <p>اختر مقامًا واحدًا تشعر أنه أضعف مقاماتك — وعِش معه أسبوعًا كاملًا. اقرأ</p>
 <p>فصله كل يوم. وطبّق تمرينه. وادعُ الله بأسمائه. ثم انتقل إلى المقام</p>
 <p>التالي.</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 <p>وفي كل مرة تعود فيها إلى هذا الكتاب — ستجد فيه ما لم تجده في المرة</p>
 <p>السابقة. لأنك تغيّرت. ولأن أسماء الله لا تنتهي معانيها.</p>
-<p class="bold-text">ملحق ١: تخريج الأحاديث</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="strong">ملحق ١: تخريج الأحاديث</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>فيما يلي تخريج الأحاديث والآثار الواردة في الكتاب مع بيان مصادرها</p>
 <p>ودرجاتها.</p>
 <p>——————————————- ————————- ————————-</p>
-<p class="bold-text">الحديث]**                     **المصدر**   **[الدرجة</p>
+<p class="strong">الحديث]**                     **المصدر**   **[الدرجة</p>
 <p>حديث جبريل: «ما الإحسان؟ أن تعبد الله كأنك متفق عليه    [صحيح</p>
 <p>تراه...»</p>
 <p class="hadith">«من تقرّب إليّ شبرًا تقرّبت إليه               متفق عليه    [صحيح</p>
@@ -3007,12 +2831,12 @@ body { font-size: 16px; }
 <p class="hadith">«أحبّ الأعمال إلى الله أدومها وإن           متفق عليه    [صحيح</p>
 <p>قلّ»</p>
 <p>——————————————- ————————- ————————-</p>
-<p class="bold-text">ملحق ٢: فهرس الأسماء الحسنى</p>
-<div class="separator">✦ ✦ ✦</div>
+<p class="strong">ملحق ٢: فهرس الأسماء الحسنى</p>
+<div class="sep">✦ ✦ ✦</div>
 <p>فيما يلي الأسماء الحسنى التسعة والتسعون كما وردت في الكتاب، مع بيان</p>
 <p>المقام الذي ظهر فيه كل اسم.</p>
 <p>——————— ——————————- ——————————-</p>
-<p class="bold-text">\#]**   **الاسم**          **[المقام</p>
+<p class="strong">\#]**   **الاسم**          **[المقام</p>
 <p>1]        الله               [الفصل الأول +</p>
 <p>الخاتمة</p>
 <p>2]        الأوّل              [اليقظة</p>
@@ -3114,22 +2938,22 @@ body { font-size: 16px; }
 <p>98]       المُنتقم            [الخاتمة</p>
 <p>99]       الواجد             [الخاتمة</p>
 <p>——————— ——————————- ——————————-</p>
-<div class="separator">✦ ✦ ✦</div>
+<div class="sep">✦ ✦ ✦</div>
 
   </div>
 </section>
 
-<div class="footer">
-  <p class="gold">إلى الله — رحلة إلى الله عبر أسمائه الحسنى</p>
+<div class="foot">
+  <p class="gd">إلى الله — رحلة إلى الله عبر أسمائه الحسنى</p>
   <p>© حمد الكتبي — ٢٠٢٦</p>
-  <p style="margin-top:15px;font-size:0.9em;">متاح أيضًا على <a href="https://amazon.com/dp/B0GT5XSSXV" style="color:var(--gold);">Amazon Kindle</a></p>
+  <p style="margin-top:12px;font-size:0.9em;">متاح أيضًا على <a href="https://amazon.com/dp/B0GT5XSSXV">Amazon Kindle</a></p>
 </div>
 
-<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-window.addEventListener('scroll', () => {
-  document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 500);
+window.addEventListener('scroll',()=>{
+  document.querySelector('.st').classList.toggle('v',window.scrollY>400);
 });
 </script>
 
